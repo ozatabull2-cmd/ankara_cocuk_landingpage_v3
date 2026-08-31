@@ -1,66 +1,68 @@
 import React from 'react';
-import { CONTACT_URL, NAV_LINKS } from '../data/landingData';
-import { Instagram, Sparkles, ArrowUpRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { SITE_CONFIG, trackEvent } from '../data/config';
+import { Instagram, ArrowUpRight } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#0B1220] border-t border-slate-800 text-slate-400 text-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+    <footer className="bg-[#0B1220] border-t border-slate-800 text-slate-400 text-xs sm:text-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-14">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-10">
           
           {/* Brand Col */}
-          <div className="md:col-span-6 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold text-lg shadow-sm">
-                <Sparkles className="w-5 h-5" />
+          <div className="md:col-span-6 space-y-3.5">
+            <Link to="/" className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full overflow-hidden border border-slate-700 bg-white shadow-xs">
+                <img src="/logo.jpg" alt="Logo" className="w-full h-full object-cover" />
               </div>
               <div>
-                <span className="font-bold text-white text-lg block leading-tight">
-                  Ankara Çocuk Ağı
+                <span className="font-extrabold text-white text-base block leading-tight">
+                  {SITE_CONFIG.brandName}
                 </span>
-                <span className="text-xs text-slate-400 font-medium">
-                  Tanıtım ve reklam hizmetleri
+                <span className="text-[11px] text-slate-400 font-medium">
+                  {SITE_CONFIG.brandSubtitle}
                 </span>
               </div>
-            </div>
-            <p className="text-slate-400 text-sm max-w-sm leading-relaxed">
-              Çocuklu ailelerle işletmeler arasında ölçülebilir bağ.
+            </Link>
+            <p className="text-slate-400 text-xs sm:text-sm max-w-sm leading-relaxed">
+              Çocuklu ailelerle işletmeler arasında ölçülebilir ve güvenilir bağ.
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className="md:col-span-3 space-y-3">
+          <div className="md:col-span-3 space-y-2.5">
             <div className="text-xs font-bold uppercase tracking-wider text-slate-300">
-              Hızlı Gezinme
+              Sayfalar & Modeller
             </div>
-            <ul className="space-y-2">
-              {NAV_LINKS.map((link) => (
-                <li key={link.href}>
-                  <a
-                    href={link.href}
-                    className="text-slate-400 hover:text-white transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
+            <ul className="space-y-2 text-xs sm:text-sm">
+              <li>
+                <Link to="/" className="text-slate-400 hover:text-white transition-colors">
+                  Haftalık Tanıtım Paketleri (3.000 TL - 6.000 TL)
+                </Link>
+              </li>
+              <li>
+                <Link to="/aylik-calisma" className="text-slate-400 hover:text-white transition-colors">
+                  Aylık Reklam ve Görünürlük (20.000 TL - 25.000 TL)
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Social / Contact */}
-          <div className="md:col-span-3 space-y-3">
+          {/* Contact Col */}
+          <div className="md:col-span-3 space-y-2.5">
             <div className="text-xs font-bold uppercase tracking-wider text-slate-300">
               İletişim & Sosyal Medya
             </div>
             <div>
               <a
-                href={CONTACT_URL}
+                href={SITE_CONFIG.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700"
+                onClick={() => trackEvent('click_instagram', { source: 'footer' })}
+                className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-xs sm:text-sm"
               >
                 <Instagram className="w-4 h-4 text-pink-400" />
-                <span className="font-medium text-xs sm:text-sm">@ankaracocuketkinlikler</span>
+                <span className="font-semibold">{SITE_CONFIG.instagramHandle}</span>
                 <ArrowUpRight className="w-3.5 h-3.5 text-slate-500" />
               </a>
             </div>
@@ -68,13 +70,13 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-12 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        {/* Bottom Bar */}
+        <div className="mt-10 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] sm:text-xs text-slate-500">
           <div>
-            © {new Date().getFullYear()} Ankara Çocuk Ağı. Tüm hakları saklıdır.
+            © {new Date().getFullYear()} {SITE_CONFIG.brandName}. Tüm hakları saklıdır.
           </div>
           <div>
-            Ankara Çocuk Ağı Tanıtım ve Reklam Hizmetleri
+            Haftalık Tanıtım & Aylık Meta Reklam Hizmetleri
           </div>
         </div>
 
