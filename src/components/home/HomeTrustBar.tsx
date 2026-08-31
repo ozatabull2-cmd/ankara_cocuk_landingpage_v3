@@ -6,27 +6,27 @@ export const HomeTrustBar: React.FC = () => {
     {
       icon: Instagram,
       value: '85.000+',
-      label: 'Ana Instagram hesabı',
+      label: 'Instagram Takipçisi',
     },
     {
       icon: Globe,
       value: '15.000+',
-      label: 'Aylık web ziyaretçisi',
+      label: 'Aylık Web Ziyaretçisi',
     },
     {
       icon: Bell,
       value: '3.500+',
-      label: 'Instagram kanalı',
+      label: 'Yayın Kanalı Üyesi',
     },
     {
       icon: MessageCircle,
       value: '2.300+',
-      label: 'WhatsApp topluluğu',
+      label: 'WhatsApp Topluluk Üyesi',
     },
     {
       icon: Smartphone,
       value: '1.000+',
-      label: 'Mobil uygulama',
+      label: 'Aktif Uygulama Kullanıcısı',
     },
   ];
 
