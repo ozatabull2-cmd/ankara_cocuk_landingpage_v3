@@ -4,19 +4,19 @@ import { Check, ArrowUpRight, Sparkles, Info, MessageCircle } from 'lucide-react
 
 export const HomeWeeklyPackages: React.FC = () => {
   return (
-    <section id="haftalik-paketler" className="py-14 sm:py-20 bg-white scroll-mt-20">
+    <section id="haftalik-paketler" className="py-10 sm:py-16 bg-white scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-3 mb-12">
+        <div className="max-w-3xl mx-auto text-center space-y-2.5 mb-8 sm:mb-10">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold tracking-wide uppercase">
-            HIZLI GÖRÜNÜRLÜK
+            HIZLI GÖRÜNÜRLÜK & DAĞITIM
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0B2545] tracking-tight">
             Haftalık Tanıtım Paketleri
           </h2>
-          <p className="text-sm sm:text-base text-slate-700 font-normal">
-            Amacınıza göre temel duyuru veya daha geniş dağıtım seçeneğini belirleyin.
+          <p className="text-xs sm:text-base text-slate-600 font-normal max-w-xl mx-auto">
+            İnsanların sizi görmesi başlangıçtır. <strong className="text-blue-600 font-semibold">Asıl değer, doğru kişilerin sizi yeniden hatırlamasıdır.</strong>
           </p>
         </div>
 
