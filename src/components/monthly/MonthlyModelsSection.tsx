@@ -1,5 +1,5 @@
 import React from 'react';
-import { SITE_CONFIG, MONTHLY_MODELS, trackEvent, getWhatsAppUrl } from '../../data/config';
+import { MONTHLY_MODELS, trackEvent, getWhatsAppUrl } from '../../data/config';
 import { Check, ArrowUpRight, Building2, Info, Sparkles, MessageCircle } from 'lucide-react';
 
 export const MonthlyModelsSection: React.FC = () => {
@@ -103,7 +103,7 @@ export const MonthlyModelsSection: React.FC = () => {
                 </div>
 
                 {/* CTA Button */}
-                <div className="pt-2 mt-auto space-y-2">
+                <div className="pt-2 mt-auto">
                   <a
                     href={getWhatsAppUrl(model.whatsappMessage)}
                     target="_blank"
@@ -122,16 +122,6 @@ export const MonthlyModelsSection: React.FC = () => {
                     <MessageCircle className="w-5 h-5 fill-white stroke-none" />
                     <span>WhatsApp’tan Bilgi Al</span>
                     <ArrowUpRight className="w-4 h-4 opacity-80" />
-                  </a>
-
-                  <a
-                    href={SITE_CONFIG.instagramUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => trackEvent('click_instagram', { source: 'monthly_model_secondary', package_name: model.name })}
-                    className="w-full inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-slate-200 py-1.5 transition-colors"
-                  >
-                    <span>veya Instagram’dan Sor</span>
                   </a>
                 </div>
 

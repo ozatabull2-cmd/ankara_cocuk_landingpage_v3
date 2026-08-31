@@ -77,7 +77,7 @@ export const Footer: React.FC = () => {
               >
                 <div className="flex items-center gap-2">
                   <Instagram className="w-4 h-4 text-pink-400" />
-                  <span className="font-medium">{SITE_CONFIG.instagramHandle}</span>
+                  <span className="font-medium">85K+ {SITE_CONFIG.instagramHandle}</span>
                 </div>
                 <ArrowUpRight className="w-3.5 h-3.5 text-slate-500" />
               </a>

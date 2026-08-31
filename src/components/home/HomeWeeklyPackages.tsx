@@ -111,7 +111,7 @@ export const HomeWeeklyPackages: React.FC = () => {
                 </div>
 
                 {/* CTA Button */}
-                <div className="pt-2 mt-auto space-y-2">
+                <div className="pt-2 mt-auto">
                   <a
                     href={getWhatsAppUrl(pkg.whatsappMessage)}
                     target="_blank"
@@ -130,16 +130,6 @@ export const HomeWeeklyPackages: React.FC = () => {
                     <MessageCircle className="w-5 h-5 fill-white stroke-none" />
                     <span>WhatsApp’tan Bilgi Al</span>
                     <ArrowUpRight className="w-4 h-4 opacity-80" />
-                  </a>
-
-                  <a
-                    href={SITE_CONFIG.instagramUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => trackEvent('click_instagram', { source: 'package_secondary', package_name: pkg.name })}
-                    className="w-full inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-800 py-1.5 transition-colors"
-                  >
-                    <span>veya Instagram’dan Sor</span>
                   </a>
                 </div>
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import { SITE_CONFIG, trackEvent, getWhatsAppUrl } from '../../data/config';
-import { Instagram, ArrowRight, MessageSquare, MessageCircle } from 'lucide-react';
+import { trackEvent, getWhatsAppUrl } from '../../data/config';
+import { ArrowRight, MessageSquare, MessageCircle } from 'lucide-react';
 
 export const MonthlyFinalCta: React.FC = () => {
   return (
@@ -24,30 +24,18 @@ export const MonthlyFinalCta: React.FC = () => {
           Mevcut reklam hesabınızı, hedeflerinizi ve dijital hazırlığınızı birlikte değerlendirerek uygun modeli netleştirelim.
         </p>
 
-        <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+        <div className="pt-2 flex justify-center">
           <a
             href={getWhatsAppUrl("Merhaba, okulumuz için aylık reklam modelleri hakkında görüşme başlatmak istiyorum.")}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent('click_whatsapp', { source: 'monthly_final_cta' })}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm sm:text-base px-8 py-4 rounded-xl shadow-lg shadow-emerald-900/30 transition-all duration-150 active:scale-98"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm sm:text-base px-9 py-4 rounded-xl shadow-lg shadow-emerald-900/30 transition-all duration-150 active:scale-98"
             aria-label="WhatsApp'tan görüşme başlat (0533 046 48 50)"
           >
             <MessageCircle className="w-5 h-5 fill-white stroke-none" />
             <span>WhatsApp’tan Görüşme Başlat</span>
             <ArrowRight className="w-4 h-4" />
-          </a>
-
-          <a
-            href={SITE_CONFIG.instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackEvent('click_instagram', { source: 'monthly_final_cta' })}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-bold text-sm sm:text-base px-6 py-4 rounded-xl border border-slate-700 transition-all duration-150 active:scale-98"
-            aria-label="Instagram'dan görüşme başlat"
-          >
-            <Instagram className="w-4 h-4 text-pink-400" />
-            <span>Instagram’dan Ulaş</span>
           </a>
         </div>
 
