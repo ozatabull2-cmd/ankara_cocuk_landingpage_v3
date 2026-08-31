@@ -123,21 +123,6 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
   },
 ];
 
-// Package Selection Help Data (Weekly)
-export const SELECTION_HELP = [
-  {
-    title: "Sadece temel duyuru yapmak istiyorum",
-    desc: "Etkinlik, atölye veya işletmenizi Ankara ailelerine temel kanallarda duyurmak istiyorsanız 3.000 TL’lik paket yeterlidir.",
-    recommendedPackage: "3.000 TL Paketi",
-    targetId: "haftalik-3000",
-  },
-  {
-    title: "Daha geniş erişim ve kaybolmayan kitle istiyorum",
-    desc: "Etkinliğinizi, atölyenizi, oyun alanınızı veya okulunuzu WhatsApp, mobil uygulama, bildirim ve Meta reklamlarıyla daha geniş kitleye duyurmak; ilgilenen velileri sonraki tanıtımlarda yeniden hedeflemek istiyorsanız 6.000 TL’lik paket uygundur.",
-    recommendedPackage: "6.000 TL Paketi",
-    targetId: "haftalik-6000",
-  },
-];
 
 // Weekly FAQ Items
 export const WEEKLY_FAQS = [
