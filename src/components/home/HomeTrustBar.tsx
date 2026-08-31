@@ -73,7 +73,7 @@ export const HomeTrustBar: React.FC = () => {
             Ağustos 2026 itibarıyla kanal büyüklükleridir.
           </p>
           <p className="font-bold text-[#0B2545]">
-            Hedef kitlemiz ağırlıklı olarak Ankara’da yaşayan çocuklu ailelerden oluşmaktadır.
+            Hedef kitlemiz Ankara’da yaşayan çocuklu ailelerden oluşmaktadır.
           </p>
         </div>
 
