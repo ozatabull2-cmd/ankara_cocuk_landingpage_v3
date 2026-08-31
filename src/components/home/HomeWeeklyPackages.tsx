@@ -1,6 +1,6 @@
 import React from 'react';
-import { SITE_CONFIG, WEEKLY_PACKAGES, trackEvent, getWhatsAppUrl } from '../../data/config';
-import { Check, ArrowUpRight, Sparkles, AlertCircle, Info, MessageCircle } from 'lucide-react';
+import { WEEKLY_PACKAGES, trackEvent, getWhatsAppUrl } from '../../data/config';
+import { Check, ArrowUpRight, Sparkles, Info, MessageCircle } from 'lucide-react';
 
 export const HomeWeeklyPackages: React.FC = () => {
   return (
@@ -136,14 +136,6 @@ export const HomeWeeklyPackages: React.FC = () => {
               </div>
             );
           })}
-        </div>
-
-        {/* Ad Budget Explanation Box */}
-        <div className="mt-8 max-w-3xl mx-auto bg-slate-50 border border-slate-200 rounded-xl p-4 flex items-start gap-3 text-slate-700">
-          <AlertCircle className="w-4 h-4 text-slate-500 flex-shrink-0 mt-0.5" />
-          <p className="text-xs sm:text-sm leading-relaxed">
-            {SITE_CONFIG.adBudgetNoticeWeekly}
-          </p>
         </div>
 
       </div>

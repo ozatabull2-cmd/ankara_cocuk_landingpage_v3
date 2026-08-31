@@ -134,7 +134,7 @@ export const WEEKLY_FAQS = [
   {
     id: "w-faq-2",
     question: "Reklam bütçesi paket ücretine dahil mi?",
-    answer: "Evet, her iki haftalık pakette de belirlenen Meta reklam desteği paket kapsamındadır. Reklam bütçesi dağılımı yayın öncesinde yazılı olarak netleştirilir.",
+    answer: "Evet, her iki haftalık pakette de belirlenen Meta reklam desteği paket kapsamındadır.",
   },
   {
     id: "w-faq-3",
