@@ -4,6 +4,7 @@ import { MetaHead } from '../components/MetaHead';
 import { HomeHero } from '../components/home/HomeHero';
 import { HomeTrustBar } from '../components/home/HomeTrustBar';
 import { HomeWeeklyPackages } from '../components/home/HomeWeeklyPackages';
+import { HomeValueProposition } from '../components/home/HomeValueProposition';
 import { MonthlyBanner } from '../components/home/MonthlyBanner';
 import { HomeFaq } from '../components/home/HomeFaq';
 import { HomeFinalCta } from '../components/home/HomeFinalCta';
@@ -20,13 +21,16 @@ export const HomePage: React.FC = () => {
         {/* 1. Hero */}
         <HomeHero />
 
-        {/* 2. Trust Bar */}
+        {/* 2. Trust Bar (5 Multi-channel Cards) */}
         <HomeTrustBar />
 
-        {/* 3. Weekly Packages (3.000 TL & 6.000 TL) */}
+        {/* 3. Value Proposition (Paylaşımdan Daha Fazlası) */}
+        <HomeValueProposition />
+
+        {/* 4. Weekly Packages (3.000 TL & 6.000 TL) */}
         <HomeWeeklyPackages />
 
-        {/* 4. Monthly Model Redirect Banner */}
+        {/* 5. Monthly Model Redirect Banner */}
         <MonthlyBanner />
 
         {/* 6. Weekly FAQ */}
