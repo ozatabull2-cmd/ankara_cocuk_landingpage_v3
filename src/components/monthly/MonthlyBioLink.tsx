@@ -1,6 +1,6 @@
 import React from 'react';
-import { SITE_CONFIG, trackEvent } from '../../data/config';
-import { Phone, MapPin, Globe, MessageSquare, BarChart, ArrowUpRight, CheckCircle2, Sparkles, Link2 } from 'lucide-react';
+import { trackEvent, getWhatsAppUrl } from '../../data/config';
+import { Phone, MapPin, Globe, MessageSquare, BarChart, ArrowUpRight, CheckCircle2, Sparkles, Link2, MessageCircle } from 'lucide-react';
 
 export const MonthlyBioLink: React.FC = () => {
   return (
@@ -61,13 +61,14 @@ export const MonthlyBioLink: React.FC = () => {
             {/* CTA */}
             <div className="pt-2">
               <a
-                href={SITE_CONFIG.instagramUrl}
+                href={getWhatsAppUrl("Merhaba, BioLink Pro hizmeti hakkında detaylı bilgi almak istiyorum.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackEvent('click_biolink', { source: 'monthly_biolink_section' })}
-                className="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm sm:text-base px-6 py-3 rounded-xl shadow-xs transition-all duration-150 active:scale-98"
-                aria-label="BioLink hakkında bilgi al"
+                className="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-md transition-all duration-150 active:scale-98"
+                aria-label="BioLink hakkında WhatsApp'tan bilgi al (0533 046 48 50)"
               >
+                <MessageCircle className="w-5 h-5 fill-white stroke-none" />
                 <span>BioLink Hakkında Bilgi Al</span>
                 <ArrowUpRight className="w-4 h-4" />
               </a>

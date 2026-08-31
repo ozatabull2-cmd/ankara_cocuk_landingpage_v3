@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { SITE_CONFIG, trackEvent } from '../data/config';
-import { Menu, X, ArrowUpRight } from 'lucide-react';
+import { SITE_CONFIG, trackEvent, getWhatsAppUrl } from '../data/config';
+import { Menu, X, ArrowUpRight, MessageCircle } from 'lucide-react';
 
 export const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -91,14 +91,26 @@ export const Header: React.FC = () => {
             })}
           </nav>
 
-          {/* Desktop Right CTA */}
-          <div className="hidden sm:flex items-center gap-3">
+          {/* Desktop Right CTAs */}
+          <div className="hidden sm:flex items-center gap-2.5">
+            <a
+              href={getWhatsAppUrl(isMonthlyPage ? "Merhaba, Ankara Çocuk Ağı aylık reklam modelleri hakkında WhatsApp üzerinden görüşmek istiyorum." : "Merhaba, Ankara Çocuk Ağı haftalık tanıtım paketleri hakkında WhatsApp'tan bilgi almak istiyorum.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => trackEvent('click_whatsapp', { source: isMonthlyPage ? 'monthly_header' : 'weekly_header' })}
+              className="inline-flex items-center gap-1.5 bg-[#25D366] hover:bg-[#20bd5a] text-white text-xs sm:text-sm font-bold px-3.5 sm:px-4 py-2.5 rounded-xl shadow-2xs hover:shadow-xs transition-all duration-150 active:scale-95"
+              aria-label="WhatsApp üzerinden mesaj gönderin (0533 046 48 50)"
+            >
+              <MessageCircle className="w-4 h-4 fill-white stroke-none" />
+              <span>WhatsApp</span>
+            </a>
+
             <a
               href={SITE_CONFIG.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleCtaClick}
-              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold px-4 sm:px-5 py-2.5 rounded-xl shadow-xs hover:shadow-sm transition-all duration-150 active:scale-95"
+              className="inline-flex items-center gap-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs sm:text-sm font-bold px-3.5 sm:px-4 py-2.5 rounded-xl shadow-2xs hover:shadow-xs transition-all duration-150 active:scale-95"
               aria-label={isMonthlyPage ? "Aylık çalışma için Instagram'dan görüşme başlat" : "Tanıtım paketi seçimi için Instagram'dan mesaj gönder"}
             >
               <span>{isMonthlyPage ? "Görüşme Başlat" : "Paketi Birlikte Seçelim"}</span>
@@ -159,7 +171,22 @@ export const Header: React.FC = () => {
             })}
           </nav>
 
-          <div className="pt-2">
+          <div className="pt-2 space-y-2">
+            <a
+              href={getWhatsAppUrl(isMonthlyPage ? "Merhaba, Ankara Çocuk Ağı aylık reklam modelleri hakkında WhatsApp üzerinden görüşmek istiyorum." : "Merhaba, Ankara Çocuk Ağı haftalık tanıtım paketleri hakkında WhatsApp'tan bilgi almak istiyorum.")}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                setMobileMenuOpen(false);
+                trackEvent('click_whatsapp', { source: isMonthlyPage ? 'monthly_mobile_header' : 'weekly_mobile_header' });
+              }}
+              className="w-full flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold px-4 py-3 rounded-xl shadow-xs text-sm"
+              aria-label="WhatsApp'tan iletişime geç (0533 046 48 50)"
+            >
+              <MessageCircle className="w-4 h-4 fill-white stroke-none" />
+              <span>WhatsApp İletişim ({SITE_CONFIG.whatsappDisplayPhone})</span>
+            </a>
+
             <a
               href={SITE_CONFIG.instagramUrl}
               target="_blank"

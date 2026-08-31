@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SITE_CONFIG, trackEvent } from '../data/config';
-import { Instagram, ArrowUpRight } from 'lucide-react';
+import { SITE_CONFIG, trackEvent, getWhatsAppUrl } from '../data/config';
+import { Instagram, ArrowUpRight, MessageCircle } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -53,16 +53,32 @@ export const Footer: React.FC = () => {
             <div className="text-xs font-bold uppercase tracking-wider text-slate-300">
               İletişim & Sosyal Medya
             </div>
-            <div>
+            <div className="space-y-2">
+              <a
+                href={getWhatsAppUrl("Merhaba, Ankara Çocuk Ağı tanıtım ve reklam hizmetleri hakkında bilgi almak istiyorum.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent('click_whatsapp', { source: 'footer' })}
+                className="w-full inline-flex items-center justify-between gap-2 text-slate-200 hover:text-white transition-colors p-2.5 rounded-xl bg-emerald-950/40 border border-emerald-800/50 hover:border-emerald-700 text-xs sm:text-sm"
+              >
+                <div className="flex items-center gap-2">
+                  <MessageCircle className="w-4 h-4 text-emerald-400 fill-emerald-400 stroke-none" />
+                  <span className="font-semibold">{SITE_CONFIG.whatsappDisplayPhone}</span>
+                </div>
+                <ArrowUpRight className="w-3.5 h-3.5 text-emerald-500" />
+              </a>
+
               <a
                 href={SITE_CONFIG.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackEvent('click_instagram', { source: 'footer' })}
-                className="inline-flex items-center gap-2 text-slate-300 hover:text-white transition-colors p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-xs sm:text-sm"
+                className="w-full inline-flex items-center justify-between gap-2 text-slate-300 hover:text-white transition-colors p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-xs sm:text-sm"
               >
-                <Instagram className="w-4 h-4 text-pink-400" />
-                <span className="font-semibold">{SITE_CONFIG.instagramHandle}</span>
+                <div className="flex items-center gap-2">
+                  <Instagram className="w-4 h-4 text-pink-400" />
+                  <span className="font-medium">{SITE_CONFIG.instagramHandle}</span>
+                </div>
                 <ArrowUpRight className="w-3.5 h-3.5 text-slate-500" />
               </a>
             </div>

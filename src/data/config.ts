@@ -5,8 +5,9 @@ export const SITE_CONFIG = {
   brandSubtitle: "Tanıtım ve reklam hizmetleri",
   instagramHandle: "@ankaracocuketkinlikler",
   instagramUrl: "https://www.instagram.com/ankaracocuketkinlikler/",
-  // WhatsApp is optional/null when not configured - never show broken/fake buttons
-  whatsappUrl: null as string | null,
+  // WhatsApp Configuration
+  whatsappPhone: "905330464850",
+  whatsappDisplayPhone: "0533 046 48 50",
   
   // Ad budget note configurable
   adBudgetMaxLimit: null as string | null, // e.g. "5.000 TL" or null for default text
@@ -23,6 +24,15 @@ export const SITE_CONFIG = {
       description: "Okullar, anaokulları ve çocuk odaklı işletmeler için aylık görünürlük, Meta reklam yönetimi, yeniden hedefleme ve kuruma ait reklam altyapısı.",
     },
   },
+};
+
+/**
+ * Creates a direct WhatsApp link with prefilled contextual text
+ */
+export const getWhatsAppUrl = (message?: string): string => {
+  const defaultMsg = "Merhaba, Ankara Çocuk Ağı tanıtım ve reklam hizmetleri hakkında bilgi almak istiyorum.";
+  const text = encodeURIComponent(message || defaultMsg);
+  return `https://wa.me/${SITE_CONFIG.whatsappPhone}?text=${text}`;
 };
 
 // Analytics Event Tracker Hook / Helper
@@ -64,6 +74,7 @@ export interface WeeklyPackage {
   ctaText: string;
   notice?: string;
   event: AnalyticsEvent;
+  whatsappMessage: string;
   isPopular?: boolean;
 }
 
@@ -84,6 +95,7 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
     ],
     ctaText: "3.000 TL Paketini Sor",
     event: "click_package_3000",
+    whatsappMessage: "Merhaba, Ankara Çocuk Ağı 3.000 TL'lik 'Duyur ve Görünür Ol' haftalık tanıtım paketi hakkında bilgi almak istiyorum.",
     isPopular: false,
   },
   {
@@ -107,6 +119,7 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
     notice: "Bu paket kapsamında oluşan hedef kitle ve kampanya verileri Ankara Çocuk Ağı reklam altyapısında birikir.",
     ctaText: "6.000 TL Paketini Sor",
     event: "click_package_6000",
+    whatsappMessage: "Merhaba, Ankara Çocuk Ağı 6.000 TL'lik 'Yönlendir, Ölç ve Yeniden Ulaş' haftalık tanıtım paketi hakkında bilgi almak istiyorum.",
     isPopular: true,
   },
 ];
@@ -158,6 +171,7 @@ export interface MonthlyModel {
   budgetNotice: string;
   ctaText: string;
   event: AnalyticsEvent;
+  whatsappMessage: string;
   highlightBadge?: string;
 }
 
@@ -180,6 +194,7 @@ export const MONTHLY_MODELS: MonthlyModel[] = [
     budgetNotice: "Planlanan Meta reklam bütçesi ve aylık üst sınır, çalışma öncesinde yazılı olarak netleştirilir.",
     ctaText: "20.000 TL Modelini Sor",
     event: "click_package_20000",
+    whatsappMessage: "Merhaba, Ankara Çocuk Ağı 20.000 TL'lik 'Aylık Sürekli Görünürlük' modeli hakkında bilgi almak istiyorum.",
   },
   {
     id: "aylik-25000",
@@ -200,6 +215,7 @@ export const MONTHLY_MODELS: MonthlyModel[] = [
     budgetNotice: "Meta reklam bütçesi doğrudan okul tarafından Meta’ya ödenir.",
     ctaText: "25.000 TL Modelini Sor",
     event: "click_package_25000",
+    whatsappMessage: "Merhaba, okulumuz için 25.000 TL'lik 'Okula Özel Reklam Sistemi' hakkında görüşme başlatmak istiyorum.",
     highlightBadge: "Kurumsal Altyapı",
   },
 ];

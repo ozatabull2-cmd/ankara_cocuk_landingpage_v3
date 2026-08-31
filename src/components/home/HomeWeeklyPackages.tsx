@@ -1,6 +1,6 @@
 import React from 'react';
-import { SITE_CONFIG, WEEKLY_PACKAGES, trackEvent } from '../../data/config';
-import { Check, ArrowUpRight, Sparkles, AlertCircle, Info } from 'lucide-react';
+import { SITE_CONFIG, WEEKLY_PACKAGES, trackEvent, getWhatsAppUrl } from '../../data/config';
+import { Check, ArrowUpRight, Sparkles, AlertCircle, Info, MessageCircle } from 'lucide-react';
 
 export const HomeWeeklyPackages: React.FC = () => {
   return (
@@ -111,21 +111,35 @@ export const HomeWeeklyPackages: React.FC = () => {
                 </div>
 
                 {/* CTA Button */}
-                <div className="pt-2 mt-auto">
+                <div className="pt-2 mt-auto space-y-2">
+                  <a
+                    href={getWhatsAppUrl(pkg.whatsappMessage)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => {
+                      trackEvent(pkg.event, { package_name: pkg.name, price: pkg.price });
+                      trackEvent('click_whatsapp', { package_name: pkg.name, price: pkg.price });
+                    }}
+                    className={`w-full inline-flex items-center justify-center gap-2.5 font-bold text-sm sm:text-base py-3.5 px-5 rounded-xl shadow-xs transition-all duration-150 active:scale-98 ${
+                      pkg.isPopular
+                        ? 'bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-emerald-600/20 hover:shadow-md'
+                        : 'bg-[#25D366] hover:bg-[#20bd5a] text-white'
+                    }`}
+                    aria-label={`${pkg.name} için WhatsApp'tan mesaj gönder`}
+                  >
+                    <MessageCircle className="w-5 h-5 fill-white stroke-none" />
+                    <span>WhatsApp’tan Bilgi Al</span>
+                    <ArrowUpRight className="w-4 h-4 opacity-80" />
+                  </a>
+
                   <a
                     href={SITE_CONFIG.instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => trackEvent(pkg.event, { package_name: pkg.name, price: pkg.price })}
-                    className={`w-full inline-flex items-center justify-center gap-2 font-bold text-sm sm:text-base py-3 px-5 rounded-xl shadow-xs transition-all duration-150 active:scale-98 ${
-                      pkg.isPopular
-                        ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-600/20 hover:shadow-md'
-                        : 'bg-slate-900 hover:bg-slate-800 text-white'
-                    }`}
-                    aria-label={`${pkg.name} için Instagram'dan bilgi al`}
+                    onClick={() => trackEvent('click_instagram', { source: 'package_secondary', package_name: pkg.name })}
+                    className="w-full inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-800 py-1.5 transition-colors"
                   >
-                    <span>{pkg.ctaText}</span>
-                    <ArrowUpRight className="w-4 h-4" />
+                    <span>veya Instagram’dan Sor</span>
                   </a>
                 </div>
 

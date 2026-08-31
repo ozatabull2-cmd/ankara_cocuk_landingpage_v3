@@ -1,6 +1,6 @@
 import React from 'react';
-import { SITE_CONFIG, MONTHLY_MODELS, trackEvent } from '../../data/config';
-import { Check, ArrowUpRight, Building2, Info, Sparkles } from 'lucide-react';
+import { SITE_CONFIG, MONTHLY_MODELS, trackEvent, getWhatsAppUrl } from '../../data/config';
+import { Check, ArrowUpRight, Building2, Info, Sparkles, MessageCircle } from 'lucide-react';
 
 export const MonthlyModelsSection: React.FC = () => {
   return (
@@ -102,22 +102,36 @@ export const MonthlyModelsSection: React.FC = () => {
 
                 </div>
 
-                {/* CTA */}
-                <div className="pt-2 mt-auto">
+                {/* CTA Button */}
+                <div className="pt-2 mt-auto space-y-2">
+                  <a
+                    href={getWhatsAppUrl(model.whatsappMessage)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => {
+                      trackEvent(model.event, { package_name: model.name, price: model.price });
+                      trackEvent('click_whatsapp', { package_name: model.name, price: model.price });
+                    }}
+                    className={`w-full inline-flex items-center justify-center gap-2.5 font-bold text-sm sm:text-base py-3.5 px-5 rounded-xl transition-all duration-150 active:scale-98 ${
+                      isCustom
+                        ? 'bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-lg shadow-emerald-900/30'
+                        : 'bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-md'
+                    }`}
+                    aria-label={`${model.name} için WhatsApp'tan görüşme başlat`}
+                  >
+                    <MessageCircle className="w-5 h-5 fill-white stroke-none" />
+                    <span>WhatsApp’tan Bilgi Al</span>
+                    <ArrowUpRight className="w-4 h-4 opacity-80" />
+                  </a>
+
                   <a
                     href={SITE_CONFIG.instagramUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => trackEvent(model.event, { package_name: model.name, price: model.price })}
-                    className={`w-full inline-flex items-center justify-center gap-2 font-bold text-sm sm:text-base py-3.5 px-5 rounded-xl transition-all duration-150 active:scale-98 ${
-                      isCustom
-                        ? 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white shadow-lg shadow-blue-600/20'
-                        : 'bg-blue-600 hover:bg-blue-500 text-white'
-                    }`}
-                    aria-label={`${model.name} için Instagram'dan görüşme başlat`}
+                    onClick={() => trackEvent('click_instagram', { source: 'monthly_model_secondary', package_name: model.name })}
+                    className="w-full inline-flex items-center justify-center gap-1.5 text-xs font-semibold text-slate-400 hover:text-slate-200 py-1.5 transition-colors"
                   >
-                    <span>{model.ctaText}</span>
-                    <ArrowUpRight className="w-4 h-4" />
+                    <span>veya Instagram’dan Sor</span>
                   </a>
                 </div>
 

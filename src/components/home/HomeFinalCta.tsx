@@ -1,6 +1,6 @@
 import React from 'react';
-import { SITE_CONFIG, trackEvent } from '../../data/config';
-import { Instagram, ArrowRight, Sparkles } from 'lucide-react';
+import { SITE_CONFIG, trackEvent, getWhatsAppUrl } from '../../data/config';
+import { Instagram, ArrowRight, Sparkles, MessageCircle } from 'lucide-react';
 
 export const HomeFinalCta: React.FC = () => {
   return (
@@ -25,18 +25,30 @@ export const HomeFinalCta: React.FC = () => {
           Sektörünüzü ve tanıtım amacınızı yazın; size uygun haftalık paketi netleştirelim.
         </p>
 
-        <div className="pt-2 flex justify-center">
+        <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+          <a
+            href={getWhatsAppUrl("Merhaba, Ankara Çocuk Ağı haftalık tanıtım paketleri için birlikte seçim yapmak istiyorum.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackEvent('click_whatsapp', { source: 'home_final_cta' })}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-lg shadow-emerald-900/30 transition-all duration-150 active:scale-98"
+            aria-label="WhatsApp'tan mesaj gönder (0533 046 48 50)"
+          >
+            <MessageCircle className="w-5 h-5 fill-white stroke-none" />
+            <span>WhatsApp’tan Mesaj Gönder</span>
+            <ArrowRight className="w-4 h-4" />
+          </a>
+
           <a
             href={SITE_CONFIG.instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent('click_instagram', { source: 'home_final_cta' })}
-            className="inline-flex items-center justify-center gap-2.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-lg shadow-blue-600/30 transition-all duration-150 active:scale-98"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-bold text-sm sm:text-base px-6 py-3.5 rounded-xl border border-slate-700 transition-all duration-150 active:scale-98"
             aria-label="Instagram'dan mesaj gönder"
           >
-            <Instagram className="w-4 h-4 sm:w-5 sm:h-5" />
-            <span>Instagram’dan Mesaj Gönder</span>
-            <ArrowRight className="w-4 h-4" />
+            <Instagram className="w-4 h-4 text-pink-400" />
+            <span>Instagram’dan Ulaş</span>
           </a>
         </div>
 
