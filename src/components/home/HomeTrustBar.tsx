@@ -20,7 +20,7 @@ export const HomeTrustBar: React.FC = () => {
     },
     {
       icon: MessageCircle,
-      value: '2.500+',
+      value: '2.300+',
       label: 'WhatsApp topluluğu',
     },
     {
