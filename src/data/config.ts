@@ -105,8 +105,8 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
     name: "Yönlendir, Ölç ve Yeniden Ulaş",
     price: "6.000 TL",
     period: "/ hafta",
-    shortDesc: "Daha fazla kanalda görünmek ve ilgilenen kişilere ilerleyen kampanyalarda yeniden ulaşma zemini oluşturmak isteyenler için.",
-    targetAudience: "Okul, anaokulu, kolej ve kayıt odaklı çocuk işletmeleri.",
+    shortDesc: "Daha geniş ve detaylı erişim, çok kanallı görünürlük ve sonraki kampanyalar için kaybolmayan hedef kitle havuzu oluşturmak isteyenler için.",
+    targetAudience: "Etkinlik, atölye, tiyatro, oyun alanı, okul, anaokulu ve daha güçlü veli kitlesine ulaşmak isteyen çocuk işletmeleri.",
     features: [
       "3.000 TL paketindeki görünürlük kanalları",
       "WhatsApp topluluğunda paylaşım",
@@ -114,7 +114,7 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
       "Mobil uygulama bildirimi",
       "Daha güçlü Meta reklam desteği",
       "Profil ziyareti, tıklama ve mesaj gibi ilk ilgi verilerinin değerlendirilmesi",
-      "İlgilenen kişilere sonraki reklamlarda yeniden ulaşma altyapısı",
+      "İlgilenen kişilere sonraki reklamlarda yeniden ulaşma altyapısı (Kaybolmayan Kitle)",
     ],
     notice: "Bu paket kapsamında oluşan hedef kitle ve kampanya verileri Ankara Çocuk Ağı reklam altyapısında birikir.",
     ctaText: "6.000 TL Paketini Sor",
@@ -127,14 +127,14 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
 // Package Selection Help Data (Weekly)
 export const SELECTION_HELP = [
   {
-    title: "Sadece duyuru yapmak istiyorum",
-    desc: "Etkinlik, atölye veya işletmenizi duyurmak istiyorsanız 3.000 TL’lik paket yeterlidir.",
+    title: "Sadece temel duyuru yapmak istiyorum",
+    desc: "Etkinlik, atölye veya işletmenizi Ankara ailelerine temel kanallarda duyurmak istiyorsanız 3.000 TL’lik paket yeterlidir.",
     recommendedPackage: "3.000 TL Paketi",
     targetId: "haftalik-3000",
   },
   {
-    title: "Daha geniş ve güçlü tanıtım istiyorum",
-    desc: "Okul, anaokulu veya kayıt odaklı bir işletmeyseniz 6.000 TL’lik paket daha uygundur.",
+    title: "Daha geniş erişim ve kaybolmayan kitle istiyorum",
+    desc: "Etkinliğinizi, atölyenizi, oyun alanınızı veya okulunuzu WhatsApp, mobil uygulama, bildirim ve Meta reklamlarıyla daha geniş kitleye duyurmak; ilgilenen velileri sonraki tanıtımlarda yeniden hedeflemek istiyorsanız 6.000 TL’lik paket uygundur.",
     recommendedPackage: "6.000 TL Paketi",
     targetId: "haftalik-6000",
   },
@@ -145,7 +145,7 @@ export const WEEKLY_FAQS = [
   {
     id: "w-faq-1",
     question: "Hangi paket benim için uygun?",
-    answer: "Tek seferlik etkinlik, atölye veya işletme duyuruları için 3.000 TL paketi; okul, anaokulu veya daha geniş kitleye ulaşıp veri toplamak isteyen işletmeler için 6.000 TL paketi uygundur.",
+    answer: "Temel bir duyuru ve hızlı görünürlük için 3.000 TL paketi; daha geniş ve detaylı erişim, çok kanallı dağıtım (WhatsApp, mobil uygulama, bildirim) ve sonraki kampanyalarda kaybolmayan hedef kitle havuzu oluşturmak isteyen tüm etkinlik, atölye, tiyatro, oyun alanı ve okullar için 6.000 TL paketi uygundur.",
   },
   {
     id: "w-faq-2",

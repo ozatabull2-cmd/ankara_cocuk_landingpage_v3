@@ -30,10 +30,10 @@ export const PackageSelectionHelp: React.FC = () => {
                 <Megaphone className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">
-                “Sadece duyuru yapmak istiyorum”
+                “Sadece temel duyuru yapmak istiyorum”
               </h3>
               <p className="text-sm text-slate-700 leading-relaxed mb-4">
-                Etkinlik, atölye veya işletmenizi duyurmak istiyorsanız <span className="font-bold text-slate-900">3.000 TL’lik paket</span> yeterlidir.
+                Etkinlik, atölye veya küçük işletmenizi Ankara ailelerine duyurmak istiyorsanız <span className="font-bold text-slate-900">3.000 TL’lik paket</span> yeterlidir.
               </p>
             </div>
             <a
@@ -52,10 +52,10 @@ export const PackageSelectionHelp: React.FC = () => {
                 <TrendingUp className="w-5 h-5" />
               </div>
               <h3 className="text-lg font-bold text-slate-900 mb-2">
-                “Daha geniş ve güçlü tanıtım istiyorum”
+                “Daha geniş erişim ve kaybolmayan kitle istiyorum”
               </h3>
               <p className="text-sm text-slate-700 leading-relaxed mb-4">
-                Okul, anaokulu veya kayıt odaklı bir işletmeyseniz <span className="font-bold text-slate-900">6.000 TL’lik paket</span> daha uygundur.
+                Etkinlik, atölye, oyun alanı veya okulunuz için WhatsApp, mobil uygulama ve Meta reklamlarıyla daha geniş kitleye ulaşmak; <span className="font-bold text-slate-900">kaybolmayan veli kitlesi</span> oluşturmak istiyorsanız <span className="font-bold text-slate-900">6.000 TL’lik paket</span> uygundur.
               </p>
             </div>
             <a
