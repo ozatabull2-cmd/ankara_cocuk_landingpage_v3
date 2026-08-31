@@ -113,7 +113,6 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
       "Mobil uygulamada paylaşım",
       "Mobil uygulama bildirimi",
       "Daha güçlü Meta reklam desteği",
-      "Profil ziyareti, tıklama ve mesaj gibi ilk ilgi verilerinin değerlendirilmesi",
       "İlgilenen kişilere sonraki reklamlarda yeniden ulaşma altyapısı (Kaybolmayan Kitle)",
     ],
     notice: "Bu paket kapsamında oluşan hedef kitle ve kampanya verileri Ankara Çocuk Ağı reklam altyapısında birikir.",
