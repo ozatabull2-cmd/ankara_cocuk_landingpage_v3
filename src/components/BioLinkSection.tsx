@@ -1,6 +1,6 @@
 import React from 'react';
 import { CONTACT_URL } from '../data/landingData';
-import { Link2, Phone, MapPin, Globe, MessageSquare, BarChart, ArrowUpRight, CheckCircle2, Sparkles } from 'lucide-react';
+import { Phone, MapPin, Globe, MessageSquare, BarChart, ArrowUpRight, CheckCircle2, Sparkles } from 'lucide-react';
 
 export const BioLinkSection: React.FC = () => {
   return (
@@ -11,11 +11,6 @@ export const BioLinkSection: React.FC = () => {
           
           {/* Left Column - Content */}
           <div className="lg:col-span-7 space-y-6">
-            
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-800 text-xs font-bold tracking-wide uppercase">
-              <Link2 className="w-3.5 h-3.5" />
-              DİJİTAL DÖNÜŞÜM ARACI
-            </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0F172A] tracking-tight leading-tight">
               Tek bağlantı.{' '}

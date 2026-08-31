@@ -26,11 +26,6 @@ export interface MonthlyModel {
   highlightBadge?: string;
 }
 
-export interface ProcessStep {
-  stepNumber: string;
-  title: string;
-  description: string;
-}
 
 export interface FaqItem {
   id: string;
@@ -41,7 +36,6 @@ export interface FaqItem {
 export const NAV_LINKS = [
   { label: "Haftalık Paketler", href: "#haftalik-paketler" },
   { label: "Aylık Çalışmalar", href: "#aylik-calismalar" },
-  { label: "Nasıl İlerliyor?", href: "#nasil-ilerliyor" },
   { label: "SSS", href: "#sss" },
 ];
 
@@ -140,55 +134,8 @@ export const MONTHLY_MODELS: MonthlyModel[] = [
   },
 ];
 
-export const PROCESS_STEPS: ProcessStep[] = [
-  {
-    stepNumber: "01",
-    title: "İlk Talep",
-    description: "Talebin ücretli tanıtım mı, ücretsiz etkinlik bildirimi mi olduğunu netleştiririz.",
-  },
-  {
-    stepNumber: "02",
-    title: "İhtiyaç Analizi",
-    description: "Sektörü, hedefi ve kampanyanın öncelikli sonucunu belirleriz.",
-  },
-  {
-    stepNumber: "03",
-    title: "Paket Önerisi",
-    description: "Amaca göre 3.000 veya 6.000 TL’lik seçeneği sunarız.",
-  },
-  {
-    stepNumber: "04",
-    title: "Karar",
-    description: "Kapsamı, beklentiyi ve ölçülecek ilk sinyalleri netleştiririz.",
-  },
-  {
-    stepNumber: "05",
-    title: "Kampanya Hazırlığı",
-    description: "Profil, görsel, gönderi metni, teklif ve yönlendirmeleri kontrol ederiz.",
-  },
-  {
-    stepNumber: "06",
-    title: "Yayın ve Kampanya",
-    description: "İçeriği seçilen kanallarda yayınlar ve Meta reklamlarını başlatırız.",
-  },
-  {
-    stepNumber: "07",
-    title: "Sonuç ve Değerlendirme",
-    description: "Erişim, etkileşim ve olası dönüşüm kayıplarını yorumlarız.",
-  },
-  {
-    stepNumber: "08",
-    title: "Devam Planı",
-    description: "Tekrar tanıtım, üst paket veya aylık çalışma seçeneğini belirleriz.",
-  },
-];
 
 export const FAQ_ITEMS: FaqItem[] = [
-  {
-    id: "faq-1",
-    question: "Kayıt veya satış garantisi veriyor musunuz?",
-    answer: "Hayır. Hedef kitleye görünürlük, reklam dağıtımı ve ölçülebilir ilk sinyaller sağlıyoruz. Sonuç; teklifiniz, içerikleriniz, Instagram profiliniz, fiyatınız ve müşteri karşılama sürecinizden etkilenir.",
-  },
   {
     id: "faq-2",
     question: "Benim için hangi paket daha uygun?",
@@ -203,10 +150,5 @@ export const FAQ_ITEMS: FaqItem[] = [
     id: "faq-4",
     question: "Görsel ve videoyu kim hazırlıyor?",
     answer: "Yayıma hazır ana görsel veya videoyu işletme sağlar. Format, başlık, gönderi metni ve CTA konusunda yönlendirme yaparız. Sıfırdan profesyonel içerik üretimi ayrıca değerlendirilir.",
-  },
-  {
-    id: "faq-5",
-    question: "20.000 ve 25.000 TL’lik modellerin farkı nedir?",
-    answer: "20.000 TL’lik modelde reklamlar Ankara Çocuk Ağı altyapısından yönetilir ve reklam bütçesi tarafımızdan karşılanır. 25.000 TL’lik modelde reklamlar okulun kendi reklam hesabından yönetilir, hedef kitleler okulda kalır ve reklam bütçesini okul karşılar.",
   },
 ];

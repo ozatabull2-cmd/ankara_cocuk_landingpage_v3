@@ -5,7 +5,6 @@ import { Philosophy } from './components/Philosophy';
 import { WeeklyPackages } from './components/WeeklyPackages';
 import { MonthlyModels } from './components/MonthlyModels';
 import { BioLinkSection } from './components/BioLinkSection';
-import { ProcessSteps } from './components/ProcessSteps';
 import { FaqSection } from './components/FaqSection';
 import { FinalCta } from './components/FinalCta';
 import { Footer } from './components/Footer';
@@ -35,10 +34,7 @@ export function App() {
         {/* 8. BioLink Pro Bölümü */}
         <BioLinkSection />
 
-        {/* 9. Sekiz Aşamalı Çalışma Süreci */}
-        <ProcessSteps />
-
-        {/* 10. Sık Sorulan Sorular */}
+        {/* 9. Sık Sorulan Sorular */}
         <FaqSection />
 
         {/* 11. Son CTA */}
