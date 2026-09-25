@@ -269,11 +269,6 @@ export const MONTHLY_PROCESS_STEPS = [
 // Monthly FAQ Items
 export const MONTHLY_FAQS = [
   {
-    id: "m-faq-1",
-    question: "Kayıt veya satış garantisi veriyor musunuz?",
-    answer: "Hayır. Doğru hedef kitleye düzenli görünürlük, profesyonel reklam dağıtımı ve yeniden hedefleme altyapısı sağlıyoruz. Kayıt ve satış sonuçları; okulunuzun lokasyonu, kontenjanı, fiyatı, marka algısı ve veli karşılama süreciniz gibi birçok faktörden etkilenir.",
-  },
-  {
     id: "m-faq-2",
     question: "20.000 TL ve 25.000 TL modellerinin temel farkı nedir?",
     answer: "20.000 TL modelinde reklamlar Ankara Çocuk Ağı reklam hesabından yönetilir, kitleler medya ağında kalır ve planlanan reklam bütçesi paket dahilindedir. 25.000 TL modelinde ise reklamlar okulun kendi Meta hesabından yönetilir, tüm kitle ve kampanya verileri okula ait olur ve reklam bütçesini okul doğrudan Meta'ya öder.",

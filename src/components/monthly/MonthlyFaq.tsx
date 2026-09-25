@@ -3,7 +3,7 @@ import { MONTHLY_FAQS, trackEvent } from '../../data/config';
 import { ChevronDown } from 'lucide-react';
 
 export const MonthlyFaq: React.FC = () => {
-  const [openId, setOpenId] = useState<string | null>(MONTHLY_FAQS[0].id);
+  const [openId, setOpenId] = useState<string | null>(MONTHLY_FAQS[0]?.id || null);
 
   const toggleFaq = (id: string) => {
     const nextState = openId === id ? null : id;
