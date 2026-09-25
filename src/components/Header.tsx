@@ -16,6 +16,7 @@ export const Header: React.FC = () => {
 
   const homeNavLinks: NavLinkItem[] = [
     { label: "Haftalık Paketler", href: "#haftalik-paketler", isRoute: false },
+    { label: "Aylık Modeller", href: "/aylik-calisma", isRoute: true },
     { label: "Sık Sorulanlar", href: "#sss", isRoute: false },
   ];
 

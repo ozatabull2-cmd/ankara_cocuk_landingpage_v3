@@ -76,6 +76,13 @@ export interface WeeklyPackage {
   event: AnalyticsEvent;
   whatsappMessage: string;
   isPopular?: boolean;
+  specialBox?: {
+    badge: string;
+    title: string;
+    desc: string;
+    shortBenefit: string;
+    scopeNote: string;
+  };
 }
 
 export const WEEKLY_PACKAGES: WeeklyPackage[] = [
@@ -84,62 +91,73 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
     tag: "TEMEL GÖRÜNÜRLÜK",
     name: "Duyur ve Görünür Ol",
     price: "3.000 TL",
-    period: "/ hafta",
-    shortDesc: "Etkinliğini veya işletmesini Ankara’daki çocuklu ailelere duyurmak isteyenler için.",
-    targetAudience: "Atölye, tiyatro, oyun alanı, etkinlik ve küçük çocuk işletmeleri.",
+    period: "/ 7 günlük yayın",
+    shortDesc: "İşletmenizi ve duyurunuzu ailelere tanıtın.",
+    targetAudience: "Atölye, tiyatro, oyun alanı, etkinlik ve çocuk odaklı işletmeler.",
     features: [
       "Ankara Çocuk Ağı Instagram sayfalarında tanıtım",
-      "Web sitesi ve Instagram kanalında görünürlük",
-      "Meta reklam desteği",
-      "Erişim, gösterim ve etkileşim özeti",
+      "Web sitesinde görünürlük",
+      "Meta reklam desteği (Paket dahilindedir)",
+      "Erişim ve etkileşim performans özeti",
     ],
-    ctaText: "3.000 TL Paketini Sor",
+    ctaText: "Bu paketi görüşelim",
     event: "click_package_3000",
-    whatsappMessage: "Merhaba, Ankara Çocuk Ağı 3.000 TL'lik 'Duyur ve Görünür Ol' haftalık tanıtım paketi hakkında bilgi almak istiyorum.",
+    whatsappMessage: "Merhaba, Ankara Çocuk Ağı 3.000 TL'lik 'Duyur ve Görünür Ol' haftalık tanıtım paketi hakkında görüşmek istiyorum.",
     isPopular: false,
+    notice: "7 günlük tek seferlik kampanya yayınıdır. Meta reklam desteği paket dahilindedir.",
   },
   {
     id: "haftalik-6000",
-    tag: "DAHA GENİŞ DAĞITIM",
-    badge: "EN GÜÇLÜ İLK KAMPANYA",
+    tag: "ÇOK KANALLI DAĞITIM & YENİDEN ULAŞMA",
     name: "Yönlendir, Ölç ve Yeniden Ulaş",
     price: "6.000 TL",
-    period: "/ hafta",
-    shortDesc: "Daha geniş ve detaylı erişim, çok kanallı görünürlük ve sonraki kampanyalar için kaybolmayan hedef kitle havuzu oluşturmak isteyenler için.",
-    targetAudience: "Etkinlik, atölye, tiyatro, oyun alanı, okul, anaokulu ve daha güçlü veli kitlesine ulaşmak isteyen çocuk işletmeleri.",
+    period: "/ 7 günlük yayın",
+    shortDesc: "Daha kapsamlı tanıtım yapın, ilgi gösteren ailelere sonraki kampanyalarda yeniden ulaşabilin.",
+    targetAudience: "Etkinlik, atölye, tiyatro, oyun alanı, anaokulu ve daha geniş kitleye ulaşmak isteyen işletmeler.",
+    specialBox: {
+      badge: "BU PAKETE ÖZEL · YENİDEN ULAŞMA",
+      title: "Sizinle ilgilendiler. Tekrar karşılarına çıkın.",
+      desc: "Tanıtımınızla etkileşime geçen kişilerden işletmenize özel bir reklam kitlesi oluşturuyoruz. Böylece sonraki kampanyalarınızda sizi daha önce fark etmiş ailelere yeniden reklam gösterebiliyoruz.",
+      shortBenefit: "Yeni bir etkinlik veya kayıt dönemi duyurusunda önceki tanıtımın oluşturduğu ilgiyi yeniden değerlendirin.",
+      scopeNote: "Yeniden ulaşma, sonraki kampanyalarda kullanılmak üzere hazırlanan bir altyapıdır. Sonraki yayınların kapsamı ve bütçesi ayrıca planlanır.",
+    },
     features: [
-      "3.000 TL paketindeki görünürlük kanalları",
-      "WhatsApp topluluğunda paylaşım",
-      "Mobil uygulamada paylaşım",
+      "3.000 TL paketindeki tüm görünürlük kanalları (Instagram ve Web)",
+      "WhatsApp topluluğunda duyuru",
+      "Mobil uygulamada duyuru",
       "Mobil uygulama bildirimi",
-      "Daha güçlü Meta reklam desteği",
-      "İlgilenen kişilere sonraki reklamlarda yeniden ulaşma altyapısı (Kaybolmayan Kitle)",
+      "Meta reklam desteği (Paket dahilindedir)",
+      "Sonraki kampanyalar için işletmeye özel yeniden ulaşma altyapısı",
     ],
-    notice: "Bu paket kapsamında oluşan hedef kitle ve kampanya verileri Ankara Çocuk Ağı reklam altyapısında birikir.",
-    ctaText: "6.000 TL Paketini Sor",
+    ctaText: "İşletmeme özel tanıtımı görüşelim",
     event: "click_package_6000",
-    whatsappMessage: "Merhaba, Ankara Çocuk Ağı 6.000 TL'lik 'Yönlendir, Ölç ve Yeniden Ulaş' haftalık tanıtım paketi hakkında bilgi almak istiyorum.",
+    whatsappMessage: "Merhaba, Ankara Çocuk Ağı 6.000 TL'lik 'Yönlendir, Ölç ve Yeniden Ulaş' işletmeme özel tanıtım paketi hakkında görüşmek istiyorum.",
     isPopular: true,
+    notice: "7 günlük tek seferlik kampanya yayınıdır. Meta reklam desteği paket dahilindedir.",
   },
 ];
-
 
 // Weekly FAQ Items
 export const WEEKLY_FAQS = [
   {
     id: "w-faq-1",
     question: "Hangi paket benim için uygun?",
-    answer: "Temel bir duyuru ve hızlı görünürlük için 3.000 TL paketi; daha geniş ve detaylı erişim, çok kanallı dağıtım (WhatsApp, mobil uygulama, bildirim) ve sonraki kampanyalarda kaybolmayan hedef kitle havuzu oluşturmak isteyen tüm etkinlik, atölye, tiyatro, oyun alanı ve okullar için 6.000 TL paketi uygundur.",
+    answer: "Tek bir atölye veya etkinlik duyurusunu Instagram ve web üzerinden ailelere iletmek istiyorsanız 3.000 TL paketi uygundur. Instagram ve web'in yanı sıra WhatsApp topluluğu, mobil uygulama ve anlık bildirim kanallarından da faydalanmak ve ilgi gösteren velilere sonraki duyurularda yeniden reklam gösterebilmek istiyorsanız 6.000 TL paketi uygundur.",
   },
   {
     id: "w-faq-2",
     question: "Reklam bütçesi paket ücretine dahil mi?",
-    answer: "Evet, her iki haftalık pakette de belirlenen Meta reklam desteği paket kapsamındadır.",
+    answer: "Evet, her iki haftalık pakette de belirlenen Meta reklam desteği paket kapsamındadır. Yayın öncesinde detaylar yazılı olarak netleştirilir.",
   },
   {
     id: "w-faq-3",
+    question: "Yeniden ulaşma (retargeting) altyapısı nasıl çalışır?",
+    answer: "6.000 TL'lik pakette tanıtımınızla etkileşime geçen velilerden Ankara Çocuk Ağı reklam altyapısında işletmenize özel bir hedef kitle oluşturulur. Bir sonraki etkinliğinizde veya kayıt döneminizde bu kitleye yeniden reklam gösterilebilir. Bu altyapı reklam sisteminde tutulur; işletmeye kişi veya telefon listesi teslim edilmez.",
+  },
+  {
+    id: "w-faq-4",
     question: "Görsel ve tanıtım metnini kim hazırlıyor?",
-    answer: "Yayına hazır ana görsel veya videoyu işletme sağlar. Format, dikkat çekici başlık, gönderi metni ve yönlendirme butonları (CTA) konusunda tarafımızdan rehberlik yapılır.",
+    answer: "Yayına hazır ana görsel veya videoyu işletmeniz sağlar. Görsel formatı, dikkat çekici başlık, duyuru metni ve velilerin harekete geçmesini sağlayan yönlendirme ifadeleri konusunda tarafımızdan rehberlik sunulur.",
   },
 ];
 

@@ -9,7 +9,7 @@ export const WhatsAppButton: React.FC = () => {
 
   const defaultMessage = isMonthly
     ? "Merhaba, okulumuz / işletmemiz için Ankara Çocuk Ağı aylık reklam modelleri hakkında WhatsApp üzerinden görüşmek istiyorum."
-    : "Merhaba, Ankara Çocuk Ağı haftalık tanıtım paketleri hakkında WhatsApp üzerinden bilgi almak istiyorum.";
+    : "Merhaba, işletmem için Ankara Çocuk Ağı tanıtım seçenekleri hakkında WhatsApp üzerinden görüşmek istiyorum.";
 
   const whatsappLink = getWhatsAppUrl(defaultMessage);
 
