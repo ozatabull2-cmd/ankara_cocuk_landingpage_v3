@@ -115,9 +115,9 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
     shortDesc: "Ek yayın kanallarıyla tanıtımınızı genişletin, ilgi gösterenlere sonraki kampanyalarda yeniden ulaşabilin.",
     targetAudience: "Etkinlik, atölye, tiyatro, oyun alanı, anaokulu ve daha geniş kitleye ulaşmak isteyen işletmeler.",
     specialBox: {
-      badge: "BU PAKETE ÖZEL",
-      title: "Sizinle ilgilendiler. Tekrar karşılarına çıkın.",
-      desc: "Tanıtımınızla etkileşime geçenlerden işletmenize özel reklam kitlesi oluşturuyoruz. Sonraki kampanyalarda bu kişilere yeniden reklam gösterebiliriz.",
+      badge: "BU PAKETE ÖZEL · YENİDEN ULAŞMA",
+      title: "İlgi gösteren ailelere yeniden ulaşma avantajı",
+      desc: "Sizi fark eden ailelerle yeniden buluşun. Tanıtımınızla etkileşime geçen kişilerden işletmenize özel bir reklam kitlesi oluşturuyoruz. Sonraki kampanyalarda bu ailelere yeniden reklam göstererek işletmenizin hatırlanmasını ve akılda kalmasını destekliyoruz.",
       shortBenefit: "",
       scopeNote: "Sonraki reklam yayınları ayrıca planlanır.",
     },

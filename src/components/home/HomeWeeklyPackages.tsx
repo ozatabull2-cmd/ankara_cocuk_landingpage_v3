@@ -71,11 +71,11 @@ export const HomeWeeklyPackages: React.FC = () => {
                         {pkg.specialBox.title}
                       </h4>
 
-                      <p className="text-sm sm:text-base text-slate-900 leading-relaxed font-medium">
+                      <p className="text-base text-slate-900 leading-relaxed font-medium">
                         {pkg.specialBox.desc}
                       </p>
 
-                      <div className="pt-2 border-t border-[#FDA29B]/60 text-xs sm:text-sm text-slate-800 font-bold leading-relaxed">
+                      <div className="pt-2 border-t border-[#FDA29B]/60 text-sm text-slate-800 font-bold leading-relaxed">
                         {pkg.specialBox.scopeNote}
                       </div>
                     </div>

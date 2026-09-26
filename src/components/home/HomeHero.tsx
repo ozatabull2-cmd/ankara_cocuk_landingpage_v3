@@ -16,7 +16,7 @@ export const HomeHero: React.FC = () => {
 
         {/* Description */}
         <p className="text-base sm:text-lg text-slate-900 max-w-2xl mx-auto font-medium leading-relaxed">
-          Atölyenizi duyurmak, oyun alanınızı tanıtmak veya anaokulunuzun kayıt dönemini desteklemek için ailelere Instagram, web sitesi ve topluluk kanallarımız üzerinden ulaşın.
+          Çocuk odaklı işletmenizi, kurumunuzu veya etkinliğinizi Instagram, web sitesi ve topluluk kanallarımız aracılığıyla Ankara’daki çocuklu ailelere tanıtın.
         </p>
 
         {/* Primary CTA & Subtext */}
