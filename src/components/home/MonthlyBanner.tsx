@@ -1,58 +1,35 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { trackEvent, getWhatsAppUrl } from '../../data/config';
-import { CalendarRange, ArrowRight, MessageCircle } from 'lucide-react';
+import { trackEvent } from '../../data/config';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 export const MonthlyBanner: React.FC = () => {
-  const whatsappUrl = getWhatsAppUrl("Merhaba, işletmemiz / okulumuz için aylık tanıtım seçenekleri hakkında görüşmek istiyorum.");
-
   return (
-    <section id="aylik-tanitim" className="py-12 sm:py-16 bg-[#0B1220] text-white relative overflow-hidden scroll-mt-16">
-      {/* Subtle Glow */}
-      <div className="absolute top-0 right-1/4 w-80 h-80 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
-
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-slate-900/90 border border-slate-800 rounded-3xl p-6 sm:p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl">
+    <section className="py-8 sm:py-10 bg-[#F1F5F9]/70 border-t border-slate-200">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-white border-2 border-slate-200 rounded-2xl p-5 sm:p-7 shadow-2xs flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-center sm:text-left">
           
-          <div className="space-y-3 text-center md:text-left max-w-xl">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-900/60 border border-blue-700/60 text-blue-300 text-xs font-bold uppercase tracking-wide">
-              <CalendarRange className="w-3.5 h-3.5" />
-              DÜZENLİ VE SÜREKLİ GÖRÜNÜRLÜK
+          <div className="space-y-1.5">
+            <div className="flex items-center justify-center sm:justify-start gap-1.5 text-xs sm:text-sm font-extrabold text-[#1E3A8A] uppercase tracking-wide">
+              <Sparkles className="w-4 h-4 text-blue-600 flex-shrink-0" />
+              <span>Düzenli Tanıtım Seçenekleri</span>
             </div>
-
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-white tracking-tight">
-              Tek bir duyuru yerine düzenli tanıtım mı istiyorsunuz?
+            <h3 className="text-lg sm:text-xl font-black text-[#0B2545]">
+              Düzenli tanıtım mı düşünüyorsunuz?
             </h3>
-
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
-              İşletmeniz veya okulunuz için süreklilik isteyen bir çalışma planlıyorsanız aylık tanıtım seçeneklerini birlikte değerlendirelim.
+            <p className="text-sm sm:text-base text-slate-900 font-medium leading-relaxed max-w-xl">
+              Okulunuz veya işletmeniz için aylık çalışma seçeneklerimiz de bulunuyor.
             </p>
           </div>
 
-          <div className="flex-shrink-0 w-full md:w-auto flex flex-col sm:flex-row md:flex-col gap-3">
-            {/* Direct WhatsApp CTA Button */}
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => {
-                trackEvent('click_whatsapp', { source: 'home_monthly_banner_cta' });
-              }}
-              className="w-full inline-flex items-center justify-center gap-2.5 bg-[#25D366] hover:bg-[#20bd5a] text-white font-bold text-sm sm:text-base px-6 py-3.5 rounded-xl shadow-md transition-all duration-150 active:scale-98"
-              aria-label="Aylık tanıtımı görüşmek için WhatsApp mesajı gönderin"
-            >
-              <MessageCircle className="w-5 h-5 fill-white stroke-none" />
-              <span>Aylık tanıtımı görüşelim</span>
-            </a>
-
-            {/* Link to Monthly Details Page */}
+          <div className="flex-shrink-0 w-full sm:w-auto">
             <Link
               to="/aylik-calisma"
               onClick={() => trackEvent('visit_monthly_page', { source: 'home_monthly_banner' })}
-              className="w-full inline-flex items-center justify-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white font-semibold text-xs sm:text-sm px-5 py-3 rounded-xl border border-slate-700 transition-all duration-150"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0B2545] hover:bg-[#1E3A8A] text-white font-extrabold text-sm sm:text-base px-5 sm:px-6 py-3.5 min-h-[44px] rounded-xl shadow-2xs hover:shadow-xs transition-all duration-150 active:scale-98"
             >
-              <span>Aylık Modelleri İnceleyin (20.000 TL - 25.000 TL)</span>
-              <ArrowRight className="w-4 h-4" />
+              <span>Aylık çalışma seçeneklerini inceleyin</span>
+              <ArrowRight className="w-4 h-4 flex-shrink-0 stroke-[2.5]" />
             </Link>
           </div>
 

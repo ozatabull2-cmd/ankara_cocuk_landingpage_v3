@@ -14,7 +14,7 @@ export const HomeFinalCta: React.FC = () => {
 
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
         
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-900/70 border border-blue-700/70 text-blue-300 text-xs font-bold uppercase tracking-wide">
+        <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-900/90 border border-blue-700 text-blue-100 text-xs sm:text-sm font-extrabold uppercase tracking-wide">
           İLETİŞİME GEÇİN
         </div>
 
@@ -22,7 +22,7 @@ export const HomeFinalCta: React.FC = () => {
           İşletmeniz için en uygun tanıtım seçeneğini belirleyelim.
         </h2>
 
-        <p className="text-sm sm:text-base text-slate-300 max-w-xl mx-auto font-normal leading-relaxed">
+        <p className="text-base sm:text-lg text-slate-100 max-w-xl mx-auto font-medium leading-relaxed">
           İşletmenizi, konumunuzu ve hedefinizi paylaşın; uygun tanıtım seçeneğini birlikte belirleyelim.
         </p>
 
@@ -32,12 +32,12 @@ export const HomeFinalCta: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackEvent('click_whatsapp', { source: 'home_final_cta' })}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-[#EE5D50] hover:bg-[#E24A3D] text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-4 rounded-2xl shadow-lg shadow-orange-950/40 transition-all duration-150 active:scale-98"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 bg-[#EE5D50] hover:bg-[#E24A3D] text-white font-extrabold text-base sm:text-lg px-6 sm:px-10 py-4 min-h-[48px] rounded-2xl shadow-lg shadow-orange-950/40 transition-all duration-150 active:scale-98 text-center"
             aria-label="İşletmem için tanıtım planlayalım - WhatsApp üzerinden mesaj gönderin"
           >
-            <MessageCircle className="w-5 h-5 fill-white stroke-none" />
+            <MessageCircle className="w-5 h-5 fill-white stroke-none flex-shrink-0" />
             <span>İşletmem için tanıtım planlayalım</span>
-            <ArrowRight className="w-4 h-4 opacity-90" />
+            <ArrowRight className="w-4 h-4 opacity-90 flex-shrink-0 stroke-[2.5]" />
           </a>
         </div>
 

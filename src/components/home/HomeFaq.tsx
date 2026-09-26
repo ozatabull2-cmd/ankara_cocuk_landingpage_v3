@@ -19,46 +19,46 @@ export const HomeFaq: React.FC = () => {
         
         {/* Header */}
         <div className="text-center space-y-2 mb-10">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#1E3A8A] text-xs font-bold tracking-wide uppercase">
-            <HelpCircle className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-blue-50 border border-blue-200 text-[#1E3A8A] text-xs sm:text-sm font-extrabold tracking-wide uppercase">
+            <HelpCircle className="w-3.5 h-3.5 stroke-[2.5]" />
             MERAK EDİLENLER
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B2545] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-black text-[#0B2545] tracking-tight">
             Sık Sorulan Sorular
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 font-normal">
+          <p className="text-sm sm:text-base text-slate-900 font-medium">
             Haftalık tanıtım paketleri ve işleyişle ilgili temel bilgiler.
           </p>
         </div>
 
         {/* FAQ List */}
-        <div className="space-y-3.5">
+        <div className="space-y-4">
           {WEEKLY_FAQS.map((item) => {
             const isOpen = openId === item.id;
 
             return (
               <div
                 key={item.id}
-                className="bg-white rounded-2xl border border-slate-200/90 shadow-2xs overflow-hidden transition-all"
+                className="bg-white rounded-2xl border-2 border-slate-200 shadow-2xs overflow-hidden transition-all"
               >
                 <button
                   type="button"
                   onClick={() => toggleFaq(item.id)}
-                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600"
+                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600 cursor-pointer"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-sm sm:text-base font-bold text-[#0B2545] leading-snug">
+                  <span className="text-base sm:text-lg font-extrabold text-[#0B2545] leading-snug">
                     {item.question}
                   </span>
-                  <div className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-150 ${
-                    isOpen ? 'bg-blue-100 text-[#1E3A8A] rotate-180' : 'bg-slate-100 text-slate-600'
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-150 ${
+                    isOpen ? 'bg-blue-100 text-[#1E3A8A] rotate-180' : 'bg-slate-100 text-slate-800'
                   }`}>
-                    <ChevronDown className="w-4 h-4" />
+                    <ChevronDown className="w-4 h-4 stroke-[3]" />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 sm:px-5 pb-5 pt-1 text-slate-700 text-xs sm:text-sm leading-relaxed border-t border-slate-100">
+                  <div className="px-4 sm:px-5 pb-5 pt-2 text-slate-900 font-medium text-base leading-relaxed border-t border-slate-200">
                     <p>{item.answer}</p>
                   </div>
                 )}

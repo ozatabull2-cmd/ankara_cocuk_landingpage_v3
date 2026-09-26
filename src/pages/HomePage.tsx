@@ -2,7 +2,6 @@ import React from 'react';
 import { SITE_CONFIG } from '../data/config';
 import { MetaHead } from '../components/MetaHead';
 import { HomeHero } from '../components/home/HomeHero';
-import { HomeNeedSplitter } from '../components/home/HomeNeedSplitter';
 import { HomeTrustBar } from '../components/home/HomeTrustBar';
 import { HomeWeeklyPackages } from '../components/home/HomeWeeklyPackages';
 import { HomePackageComparison } from '../components/home/HomePackageComparison';
@@ -21,38 +20,32 @@ export const HomePage: React.FC = () => {
       />
       
       <main className="flex-grow">
-        {/* 1. Hero: Main Benefit Headline & Primary CTA */}
+        {/* 1. Ana Başlık & WhatsApp Butonu */}
         <HomeHero />
 
-        {/* 2. Need Splitter: Short-term vs Continuous */}
-        <HomeNeedSplitter />
-
-        {/* 3. Channels & Audience Statistics */}
+        {/* 2. Kısa Yayın Ağı Bilgisi */}
         <HomeTrustBar />
 
-        {/* 4. Weekly Packages (3.000 TL & 6.000 TL + Distinctive Box) */}
-        <div>
-          <HomeWeeklyPackages />
-          {/* 5. Short Verified Package Comparison */}
-          <HomePackageComparison />
-        </div>
+        {/* 3. Haftalık Paketler (3.000 TL & 6.000 TL) */}
+        <HomeWeeklyPackages />
 
-        {/* 6. Retargeting / Audience Infrastructure Section */}
-        <div className="mt-12 sm:mt-16">
-          <HomeRetargetingSection />
-        </div>
+        {/* 4. Karşılaştırma */}
+        <HomePackageComparison />
 
-        {/* 7. Publication Formats: How will your promotion look? */}
+        {/* 5. Yeniden Ulaşma Açıklaması ve Örneği */}
+        <HomeRetargetingSection />
+
+        {/* 6. Tanıtım Formatları / Örneği */}
         <HomeShowcaseSection />
 
-        {/* 8. Monthly Model Section */}
-        <MonthlyBanner />
-
-        {/* 9. Weekly FAQ */}
+        {/* 7. SSS */}
         <HomeFaq />
 
-        {/* 10. Final CTA */}
+        {/* 8. Ana WhatsApp Çağrısı */}
         <HomeFinalCta />
+
+        {/* 9. Küçük Aylık Çalışma Alanı */}
+        <MonthlyBanner />
       </main>
     </>
   );

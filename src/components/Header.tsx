@@ -16,7 +16,7 @@ export const Header: React.FC = () => {
 
   const homeNavLinks: NavLinkItem[] = [
     { label: "Haftalık Paketler", href: "#haftalik-paketler", isRoute: false },
-    { label: "Aylık Modeller", href: "/aylik-calisma", isRoute: true },
+    { label: "Paket Karşılaştırması", href: "#karsilastirma", isRoute: false },
     { label: "Sık Sorulanlar", href: "#sss", isRoute: false },
   ];
 
@@ -49,10 +49,10 @@ export const Header: React.FC = () => {
               />
             </div>
             <div>
-              <div className="font-extrabold text-slate-900 text-sm sm:text-lg leading-tight tracking-tight">
+              <div className="font-black text-slate-950 text-sm sm:text-lg leading-tight tracking-tight">
                 {SITE_CONFIG.brandName}
               </div>
-              <div className="text-[10px] sm:text-xs text-slate-500 font-medium hidden xs:block">
+              <div className="text-[10px] sm:text-xs text-slate-700 font-bold hidden xs:block">
                 {SITE_CONFIG.brandSubtitle}
               </div>
             </div>
@@ -66,10 +66,10 @@ export const Header: React.FC = () => {
                   <Link
                     key={link.href}
                     to={link.href}
-                    className={`text-sm font-semibold transition-colors px-3 py-1.5 rounded-lg ${
+                    className={`text-sm font-bold transition-colors px-3.5 py-1.5 rounded-lg ${
                       link.highlight
-                        ? 'text-blue-700 bg-blue-50/80 hover:bg-blue-100 hover:text-blue-800'
-                        : 'text-slate-700 hover:text-blue-600'
+                        ? 'text-blue-800 bg-blue-100 hover:bg-blue-200'
+                        : 'text-slate-800 hover:text-blue-600'
                     }`}
                   >
                     {link.label}
@@ -80,7 +80,7 @@ export const Header: React.FC = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors"
+                  className="text-sm font-bold text-slate-800 hover:text-blue-600 transition-colors"
                 >
                   {link.label}
                 </a>

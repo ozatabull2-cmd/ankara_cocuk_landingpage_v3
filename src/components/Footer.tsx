@@ -16,33 +16,33 @@ export const Footer: React.FC = () => {
                 <img src="/logo.jpg" alt="Logo" className="w-full h-full object-cover" />
               </div>
               <div>
-                <span className="font-extrabold text-white text-base block leading-tight">
+                <span className="font-black text-white text-base sm:text-lg block leading-tight">
                   {SITE_CONFIG.brandName}
                 </span>
-                <span className="text-[11px] text-slate-400 font-medium">
+                <span className="text-xs text-slate-300 font-semibold">
                   {SITE_CONFIG.brandSubtitle}
                 </span>
               </div>
             </Link>
-            <p className="text-slate-400 text-xs sm:text-sm max-w-sm leading-relaxed">
+            <p className="text-slate-300 text-sm max-w-sm font-medium leading-relaxed">
               Çocuklu ailelerle işletmeler arasında ölçülebilir ve güvenilir bağ.
             </p>
           </div>
 
           {/* Quick Links */}
           <div className="md:col-span-3 space-y-2.5">
-            <div className="text-xs font-bold uppercase tracking-wider text-slate-300">
+            <div className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white">
               Sayfalar & Modeller
             </div>
-            <ul className="space-y-2 text-xs sm:text-sm">
+            <ul className="space-y-2.5 text-sm sm:text-base font-bold">
               <li>
-                <Link to="/" className="text-slate-400 hover:text-white transition-colors">
+                <Link to="/" className="text-slate-200 hover:text-white transition-colors">
                   Haftalık Tanıtım Paketleri (3.000 TL - 6.000 TL)
                 </Link>
               </li>
               <li>
-                <Link to="/aylik-calisma" className="text-slate-400 hover:text-white transition-colors">
-                  Aylık Reklam ve Görünürlük (20.000 TL - 25.000 TL)
+                <Link to="/aylik-calisma" className="text-slate-200 hover:text-white transition-colors">
+                  Aylık Tanıtım ve Reklam Seçenekleri
                 </Link>
               </li>
             </ul>
@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
 
           {/* Contact Col */}
           <div className="md:col-span-3 space-y-2.5">
-            <div className="text-xs font-bold uppercase tracking-wider text-slate-300">
+            <div className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-white">
               İletişim & Sosyal Medya
             </div>
             <div className="space-y-2">
@@ -59,13 +59,13 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackEvent('click_whatsapp', { source: 'footer' })}
-                className="w-full inline-flex items-center justify-between gap-2 text-slate-200 hover:text-white transition-colors p-2.5 rounded-xl bg-emerald-950/40 border border-emerald-800/50 hover:border-emerald-700 text-xs sm:text-sm"
+                className="w-full inline-flex items-center justify-between gap-2 text-white hover:text-emerald-300 transition-colors p-3 rounded-xl bg-emerald-950/60 border border-emerald-700/60 hover:border-emerald-600 text-sm font-bold"
               >
                 <div className="flex items-center gap-2">
                   <MessageCircle className="w-4 h-4 text-emerald-400 fill-emerald-400 stroke-none" />
-                  <span className="font-semibold">{SITE_CONFIG.whatsappDisplayPhone}</span>
+                  <span className="font-extrabold">{SITE_CONFIG.whatsappDisplayPhone}</span>
                 </div>
-                <ArrowUpRight className="w-3.5 h-3.5 text-emerald-500" />
+                <ArrowUpRight className="w-4 h-4 text-emerald-400" />
               </a>
 
               <a
@@ -73,13 +73,13 @@ export const Footer: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackEvent('click_instagram', { source: 'footer' })}
-                className="w-full inline-flex items-center justify-between gap-2 text-slate-300 hover:text-white transition-colors p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-700 text-xs sm:text-sm"
+                className="w-full inline-flex items-center justify-between gap-2 text-slate-100 hover:text-white transition-colors p-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-slate-600 text-sm font-bold"
               >
                 <div className="flex items-center gap-2">
                   <Instagram className="w-4 h-4 text-pink-400" />
-                  <span className="font-medium">85K+ {SITE_CONFIG.instagramHandle}</span>
+                  <span className="font-bold">85K+ {SITE_CONFIG.instagramHandle}</span>
                 </div>
-                <ArrowUpRight className="w-3.5 h-3.5 text-slate-500" />
+                <ArrowUpRight className="w-4 h-4 text-slate-400" />
               </a>
             </div>
           </div>
@@ -87,7 +87,7 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-10 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] sm:text-xs text-slate-500">
+        <div className="mt-10 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs sm:text-sm text-slate-300 font-semibold">
           <div>
             © {new Date().getFullYear()} {SITE_CONFIG.brandName}. Tüm hakları saklıdır.
           </div>
