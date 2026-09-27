@@ -1,10 +1,12 @@
 import React from 'react';
-import { trackEvent, getWhatsAppUrl } from '../../data/config';
+import { trackEvent } from '../../data/config';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 
-export const HomeFinalCta: React.FC = () => {
-  const whatsappUrl = getWhatsAppUrl("Merhaba, işletmem için tanıtım planlamak istiyorum.");
+interface HomeFinalCtaProps {
+  onOpenModal: () => void;
+}
 
+export const HomeFinalCta: React.FC<HomeFinalCtaProps> = ({ onOpenModal }) => {
   return (
     <section className="py-14 sm:py-20 bg-gradient-to-b from-[#0F172A] to-[#0B1220] text-white relative overflow-hidden">
       
@@ -23,22 +25,23 @@ export const HomeFinalCta: React.FC = () => {
         </h2>
 
         <p className="text-base sm:text-lg text-slate-100 max-w-xl mx-auto font-medium leading-relaxed">
-          İşletmenizi, konumunuzu ve hedefinizi paylaşın; uygun tanıtım seçeneğini birlikte belirleyelim.
+          İşletmenizin adını, konumunu ve tanıtmak istediğiniz hizmeti paylaşın; size uygun tanıtım seçeneklerini birlikte belirleyelim.
         </p>
 
         <div className="pt-2 flex justify-center">
-          <a
-            href={whatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackEvent('click_whatsapp', { source: 'home_final_cta' })}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 bg-[#EE5D50] hover:bg-[#E24A3D] text-white font-extrabold text-base sm:text-lg px-6 sm:px-10 py-4 min-h-[48px] rounded-2xl shadow-lg shadow-orange-950/40 transition-all duration-150 active:scale-98 text-center"
-            aria-label="İşletmem için tanıtım planlayalım - WhatsApp üzerinden mesaj gönderin"
+          <button
+            type="button"
+            onClick={() => {
+              trackEvent('open_promo_modal', { source: 'home_final_cta' });
+              onOpenModal();
+            }}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 sm:gap-3 bg-[#EE5D50] hover:bg-[#E24A3D] text-white font-extrabold text-base sm:text-lg px-6 sm:px-10 py-4 min-h-[48px] rounded-2xl shadow-lg shadow-orange-950/40 transition-all duration-150 active:scale-98 text-center cursor-pointer"
+            aria-label="İşletmeniz için tanıtım planlayalım"
           >
             <MessageCircle className="w-5 h-5 fill-white stroke-none flex-shrink-0" />
-            <span>İşletmem için tanıtım planlayalım</span>
+            <span>İşletmeniz için tanıtım planlayalım</span>
             <ArrowRight className="w-4 h-4 opacity-90 flex-shrink-0 stroke-[2.5]" />
-          </a>
+          </button>
         </div>
 
       </div>

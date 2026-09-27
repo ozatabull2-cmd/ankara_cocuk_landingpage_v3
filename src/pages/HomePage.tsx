@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SITE_CONFIG } from '../data/config';
 import { MetaHead } from '../components/MetaHead';
 import { HomeHero } from '../components/home/HomeHero';
@@ -10,8 +10,14 @@ import { HomeShowcaseSection } from '../components/home/HomeShowcaseSection';
 import { MonthlyBanner } from '../components/home/MonthlyBanner';
 import { HomeFaq } from '../components/home/HomeFaq';
 import { HomeFinalCta } from '../components/home/HomeFinalCta';
+import { PromotionModal } from '../components/home/PromotionModal';
 
 export const HomePage: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => setIsModalOpen(true);
+  const handleCloseModal = () => setIsModalOpen(false);
+
   return (
     <>
       <MetaHead
@@ -20,8 +26,8 @@ export const HomePage: React.FC = () => {
       />
       
       <main className="flex-grow">
-        {/* 1. Ana Başlık & WhatsApp Butonu */}
-        <HomeHero />
+        {/* 1. Ana Başlık & Tanıtım Planlama Butonu */}
+        <HomeHero onOpenModal={handleOpenModal} />
 
         {/* 2. Kısa Yayın Ağı Bilgisi */}
         <HomeTrustBar />
@@ -41,12 +47,15 @@ export const HomePage: React.FC = () => {
         {/* 7. SSS */}
         <HomeFaq />
 
-        {/* 8. Ana WhatsApp Çağrısı */}
-        <HomeFinalCta />
+        {/* 8. Ana Tanıtım Çağrısı */}
+        <HomeFinalCta onOpenModal={handleOpenModal} />
 
         {/* 9. Küçük Aylık Çalışma Alanı */}
         <MonthlyBanner />
       </main>
+
+      {/* Tanıtım ve İletişim Modal Penceresi */}
+      <PromotionModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </>
   );
 };

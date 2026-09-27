@@ -8,6 +8,10 @@ export const SITE_CONFIG = {
   // WhatsApp Configuration
   whatsappPhone: "905330464850",
   whatsappDisplayPhone: "0533 046 48 50",
+
+  // Lead Form Backend Endpoint / Webhook URL
+  // Set this to your backend API URL, Supabase/Firebase function, or webhook (Make/Zapier)
+  leadApiEndpoint: null as string | null,
   
   // Ad budget note configurable
   adBudgetMaxLimit: null as string | null, // e.g. "5.000 TL" or null for default text
@@ -25,6 +29,15 @@ export const SITE_CONFIG = {
     },
   },
 };
+
+/**
+ * Standard prefilled WhatsApp message for promotion inquiries
+ */
+export const PROMOTION_WHATSAPP_MESSAGE = `Merhaba, tanıtım seçenekleri hakkında bilgi almak istiyorum.
+İşletme/kurum adı: 
+İlçe/konum: 
+Tanıtmak istediğim hizmet veya etkinlik: 
+İlgilendiğim tanıtım türü:`;
 
 /**
  * Creates a direct WhatsApp link with prefilled contextual text
@@ -45,7 +58,9 @@ export type AnalyticsEvent =
   | 'click_biolink'
   | 'click_instagram'
   | 'click_whatsapp'
-  | 'open_faq';
+  | 'open_faq'
+  | 'open_promo_modal'
+  | 'submit_promo_form';
 
 export const trackEvent = (eventName: AnalyticsEvent, payload?: Record<string, unknown>) => {
   if (typeof window !== 'undefined') {
