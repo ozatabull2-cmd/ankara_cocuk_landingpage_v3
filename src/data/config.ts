@@ -309,3 +309,80 @@ export const MONTHLY_FAQS = [
     answer: "25.000 TL'lik 'Okula Özel Reklam Sistemi'nde oluşturulan Meta Business Manager, reklam hesabı, Pixel/CAPI verileri ve özel hedef kitleler tamamen okulun mülkiyetinde kalır.",
   },
 ];
+
+// Publishing Network Statistics (Ankara Çocuk Ağı Yayın Kanalları)
+export interface InstagramAccountStat {
+  handle: string;
+  url: string;
+  followers: string;
+  label: string;
+}
+
+export interface OtherChannelStat {
+  value: string;
+  label: string;
+  type: 'website' | 'broadcast' | 'whatsapp' | 'app';
+}
+
+export const NETWORK_STATS = {
+  sectionTitle: "Ankara’daki çocuklu ailelere ulaşan yayın ağımız",
+  sectionSubtitle: "Tanıtımınızı Instagram hesaplarımız, web sitemiz ve aile topluluklarımız aracılığıyla Ankara’daki ailelere duyuralım.",
+  
+  // Ana ve öne çıkan Instagram hesabı
+  primaryInstagram: {
+    handle: "@ankaracocuketkinlikler",
+    url: "https://www.instagram.com/ankaracocuketkinlikler/",
+    followers: "85.000+",
+    label: "Instagram takipçisi",
+  } as InstagramAccountStat,
+
+  // İkincil Instagram hesapları
+  secondaryInstagrams: [
+    {
+      handle: "@ankaracocukrehberi",
+      url: "https://www.instagram.com/ankaracocukrehberi/",
+      followers: "25.000+",
+      label: "Instagram takipçisi",
+    },
+    {
+      handle: "@ankaraneyasiyor",
+      url: "https://www.instagram.com/ankaraneyasiyor/",
+      followers: "9.000+",
+      label: "Instagram takipçisi",
+    },
+    {
+      handle: "@ankaradacocuklaetkinlikler",
+      url: "https://www.instagram.com/ankaradacocuklaetkinlikler/",
+      followers: "3.000+",
+      label: "Instagram takipçisi",
+    },
+  ] as InstagramAccountStat[],
+
+  // Diğer yayın kanalları başlığı ve listesi
+  otherChannelsTitle: "Diğer yayın kanallarımız",
+  otherChannels: [
+    {
+      value: "15.000+",
+      label: "Aylık web sitesi ziyaretçisi",
+      type: "website",
+    },
+    {
+      value: "3.500+",
+      label: "Instagram yayın kanalı üyesi",
+      type: "broadcast",
+    },
+    {
+      value: "2.300+",
+      label: "WhatsApp topluluk üyesi",
+      type: "whatsapp",
+    },
+    {
+      value: "1.000+",
+      label: "Uygulama kullanıcısı",
+      type: "app",
+    },
+  ] as OtherChannelStat[],
+
+  footnote: "Sayılar her kanalın kendi takipçi ve üye sayılarını gösterir. Kanalların hedef kitleleri birbiriyle örtüşebilir.",
+};
+
