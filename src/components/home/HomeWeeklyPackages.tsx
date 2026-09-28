@@ -1,6 +1,7 @@
 import React from 'react';
 import { WEEKLY_PACKAGES, trackEvent, getWhatsAppUrl } from '../../data/config';
-import { Check, MessageCircle, ArrowRight, RotateCcw } from 'lucide-react';
+import { Check, ArrowRight, RotateCcw } from 'lucide-react';
+import { WhatsAppIcon } from '../WhatsAppButton';
 
 export const HomeWeeklyPackages: React.FC = () => {
   return (
@@ -132,7 +133,7 @@ export const HomeWeeklyPackages: React.FC = () => {
                     className="w-full inline-flex items-center justify-center gap-2.5 font-extrabold text-base sm:text-lg min-h-[48px] py-3.5 px-5 rounded-xl shadow-xs hover:shadow-md transition-all duration-150 active:scale-98 bg-[#25D366] hover:bg-[#20bd5a] text-white text-center"
                     aria-label={`${pkg.name} için WhatsApp üzerinden görüşün`}
                   >
-                    <MessageCircle className="w-5 h-5 fill-white stroke-none flex-shrink-0" />
+                    <WhatsAppIcon className="w-5 h-5 text-white flex-shrink-0" />
                     <span>{pkg.ctaText}</span>
                     <ArrowRight className="w-4 h-4 opacity-90 flex-shrink-0 stroke-[2.5]" />
                   </a>

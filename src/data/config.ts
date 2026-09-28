@@ -127,7 +127,7 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
     name: "Yönlendir, Ölç ve Yeniden Ulaş",
     price: "6.000 TL",
     period: "/ 7 günlük yayın",
-    shortDesc: "Ek yayın kanallarıyla tanıtımınızı genişletin, ilgi gösterenlere sonraki kampanyalarda yeniden ulaşabilin.",
+    shortDesc: "Ek yayın kanalları ve en az 2 katı erişimle tanıtımınızı genişletin, ilgi gösterenlere sonraki kampanyalarda yeniden ulaşabilin.",
     targetAudience: "Etkinlik, atölye, tiyatro, oyun alanı, anaokulu ve daha geniş kitleye ulaşmak isteyen işletmeler.",
     specialBox: {
       badge: "BU PAKETE ÖZEL · YENİDEN ULAŞMA",
@@ -139,6 +139,7 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
     features: [
       "Instagram ve web sitesinde görünürlük",
       "WhatsApp topluluğunda duyuru",
+      "En az 2 katı erişim",
       "Meta reklam desteği (Paket dahilindedir)",
       "Sonraki kampanyalar için işletmeye özel yeniden ulaşma altyapısı",
     ],
@@ -146,7 +147,7 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
     event: "click_package_6000",
     whatsappMessage: "Merhaba, Ankara Çocuk Ağı 6.000 TL'lik 'Yönlendir, Ölç ve Yeniden Ulaş' işletmeme özel tanıtım paketi hakkında görüşmek istiyorum.",
     isPopular: true,
-    notice: "7 günlük tek seferlik kampanya yayınıdır. Meta reklam desteği paket dahilindedir.",
+    notice: "7 günlük tek seferlik kampanya yayınıdır. En az 2 katı erişim sağlayan Meta reklam desteği paket dahilindedir.",
   },
 ];
 
@@ -155,7 +156,7 @@ export const WEEKLY_FAQS = [
   {
     id: "w-faq-1",
     question: "Hangi paket benim için uygun?",
-    answer: "Tek bir atölye veya etkinlik duyurusunu Instagram ve web üzerinden ailelere iletmek istiyorsanız 3.000 TL paketi uygundur. Instagram ve web'in yanı sıra WhatsApp topluluğundan da faydalanmak ve ilgi gösteren velilere sonraki duyurularda yeniden reklam gösterebilmek istiyorsanız 6.000 TL paketi uygundur.",
+    answer: "Tek bir atölye veya etkinlik duyurusunu Instagram ve web üzerinden ailelere iletmek istiyorsanız 3.000 TL paketi uygundur. Instagram ve web'in yanı sıra WhatsApp topluluğundan da faydalanmak, en az 2 katı erişim elde etmek ve ilgi gösteren velilere sonraki duyurularda yeniden reklam gösterebilmek istiyorsanız 6.000 TL paketi uygundur.",
   },
   {
     id: "w-faq-2",
