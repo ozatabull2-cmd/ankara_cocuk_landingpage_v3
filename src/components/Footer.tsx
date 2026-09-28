@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SITE_CONFIG, trackEvent, getWhatsAppUrl } from '../data/config';
-import { Instagram, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { Instagram, ArrowUpRight } from 'lucide-react';
+import { WhatsAppIcon } from './WhatsAppButton';
 
 export const Footer: React.FC = () => {
   return (
@@ -62,7 +63,7 @@ export const Footer: React.FC = () => {
                 className="w-full inline-flex items-center justify-between gap-2 text-white hover:text-emerald-300 transition-colors p-3 rounded-xl bg-emerald-950/60 border border-emerald-700/60 hover:border-emerald-600 text-sm font-bold"
               >
                 <div className="flex items-center gap-2">
-                  <MessageCircle className="w-4 h-4 text-emerald-400 fill-emerald-400 stroke-none" />
+                  <WhatsAppIcon className="w-4 h-4 text-emerald-400" />
                   <span className="font-extrabold">{SITE_CONFIG.whatsappDisplayPhone}</span>
                 </div>
                 <ArrowUpRight className="w-4 h-4 text-emerald-400" />

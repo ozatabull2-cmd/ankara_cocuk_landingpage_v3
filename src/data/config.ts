@@ -21,7 +21,7 @@ export const SITE_CONFIG = {
   seo: {
     home: {
       title: "Ankara Çocuk Etkinlik ve İşletme Tanıtım Paketleri",
-      description: "Ankara’daki çocuklu ailelere Instagram, web, WhatsApp, mobil uygulama ve Meta reklamlarıyla ulaşın. Haftalık tanıtım paketlerini inceleyin.",
+      description: "Ankara’daki çocuklu ailelere Instagram, web, WhatsApp ve Meta reklamlarıyla ulaşın. Haftalık tanıtım paketlerini inceleyin.",
     },
     monthly: {
       title: "Okullar İçin Aylık Reklam ve Görünürlük Sistemi | Ankara",
@@ -139,8 +139,6 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
     features: [
       "Instagram ve web sitesinde görünürlük",
       "WhatsApp topluluğunda duyuru",
-      "Mobil uygulamada duyuru",
-      "Mobil uygulama bildirimi",
       "Meta reklam desteği (Paket dahilindedir)",
       "Sonraki kampanyalar için işletmeye özel yeniden ulaşma altyapısı",
     ],
@@ -157,17 +155,17 @@ export const WEEKLY_FAQS = [
   {
     id: "w-faq-1",
     question: "Hangi paket benim için uygun?",
-    answer: "Tek bir atölye veya etkinlik duyurusunu Instagram ve web üzerinden ailelere iletmek istiyorsanız 3.000 TL paketi uygundur. Instagram ve web'in yanı sıra WhatsApp topluluğu, mobil uygulama ve anlık bildirim kanallarından da faydalanmak ve ilgi gösteren velilere sonraki duyurularda yeniden reklam gösterebilmek istiyorsanız 6.000 TL paketi uygundur.",
+    answer: "Tek bir atölye veya etkinlik duyurusunu Instagram ve web üzerinden ailelere iletmek istiyorsanız 3.000 TL paketi uygundur. Instagram ve web'in yanı sıra WhatsApp topluluğundan da faydalanmak ve ilgi gösteren velilere sonraki duyurularda yeniden reklam gösterebilmek istiyorsanız 6.000 TL paketi uygundur.",
   },
   {
     id: "w-faq-2",
     question: "Reklam bütçesi paket ücretine dahil mi?",
-    answer: "Evet, her iki haftalık pakette de belirlenen Meta reklam desteği paket kapsamındadır. Yayın öncesinde detaylar yazılı olarak netleştirilir.",
+    answer: "Evet, her iki haftalık pakette de belirlenen Meta reklam desteği paket kapsamındadır.",
   },
   {
     id: "w-faq-3",
     question: "Yeniden ulaşma (retargeting) altyapısı nasıl çalışır?",
-    answer: "6.000 TL'lik pakette tanıtımınızla etkileşime geçen velilerden Ankara Çocuk Ağı reklam altyapısında işletmenize özel bir hedef kitle oluşturulur. Bir sonraki etkinliğinizde veya kayıt döneminizde bu kitleye yeniden reklam gösterilebilir. Bu altyapı reklam sisteminde tutulur; işletmeye kişi veya telefon listesi teslim edilmez.",
+    answer: "6.000 TL'lik pakette tanıtımınızla etkileşime geçen kişilerden Ankara Çocuk Ağı reklam altyapısında işletmenize özel bir hedef kitle oluşturulur. Hedef kitle sürekli güncellenir ve birikir. Sonraki tanıtımlarınızda bu kitleye yeniden reklam gösterilebilir.",
   },
   {
     id: "w-faq-4",
@@ -375,11 +373,6 @@ export const NETWORK_STATS = {
       value: "2.300+",
       label: "WhatsApp topluluk üyesi",
       type: "whatsapp",
-    },
-    {
-      value: "1.000+",
-      label: "Uygulama kullanıcısı",
-      type: "app",
     },
   ] as OtherChannelStat[],
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Smartphone, BarChart3 } from 'lucide-react';
+import { Instagram, MessageCircle, BarChart3 } from 'lucide-react';
 
 export const HomeShowcaseSection: React.FC = () => {
   const formats = [
@@ -11,11 +11,11 @@ export const HomeShowcaseSection: React.FC = () => {
       details: ["Akış ve hikaye görünürlüğü", "Yaş grubu ve lokasyon vurgusu", "Profil ve mesaj yönlendirmesi"],
     },
     {
-      icon: Smartphone,
-      title: "Topluluk & Mobil Bildirim",
+      icon: MessageCircle,
+      title: "WhatsApp Topluluk Yayını",
       badge: "6.000 TL Paketinde",
-      desc: "Ankara'daki velilerin doğrudan telefonuna ulaşan WhatsApp topluluk duyurusu ve mobil uygulamada anlık bildirim iletimi.",
-      details: ["WhatsApp topluluklarında duyuru", "Mobil uygulama etkinlik kartı", "Anlık uygulama bildirimi"],
+      desc: "Ankara'daki velilerin doğrudan telefonuna ulaşan WhatsApp topluluk duyurusu ile yüksek dikkat ve doğrudan erişim.",
+      details: ["WhatsApp topluluklarında duyuru", "Doğrudan veli erişimi", "Hızlı etkileşim olanağı"],
       highlight: true,
     },
     {

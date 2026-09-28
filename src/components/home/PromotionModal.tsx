@@ -281,7 +281,7 @@ export const PromotionModal: React.FC<PromotionModalProps> = ({ isOpen, onClose 
                 </div>
 
                 <p className="text-sm sm:text-base text-slate-700 leading-relaxed font-medium">
-                  Aşağıdaki butona tıkladığınızda işletme bilgilerinizi içeren hazır bir taslak mesaj WhatsApp uygulamanızda açılacaktır. Mesajı dilediğiniz gibi düzenleyip bize hemen iletebilirsiniz.
+                  Aşağıdaki butona tıkladığınızda işletme bilgilerinizi içeren hazır bir taslak mesaj WhatsApp'ta açılacaktır. Mesajı dilediğiniz gibi düzenleyip bize hemen iletebilirsiniz.
                 </p>
 
                 {/* Message preview box */}

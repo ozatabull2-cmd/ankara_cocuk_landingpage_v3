@@ -4,7 +4,6 @@ import {
   Globe,
   Bell,
   MessageCircle,
-  Smartphone,
   ExternalLink,
   Sparkles,
 } from 'lucide-react';
@@ -30,8 +29,6 @@ export const HomeTrustBar: React.FC = () => {
         return <Bell className="w-5 h-5 text-amber-600 stroke-[2.2]" />;
       case 'whatsapp':
         return <MessageCircle className="w-5 h-5 text-emerald-600 stroke-[2.2]" />;
-      case 'app':
-        return <Smartphone className="w-5 h-5 text-purple-600 stroke-[2.2]" />;
       default:
         return <Globe className="w-5 h-5 text-slate-600 stroke-[2.2]" />;
     }
@@ -144,7 +141,7 @@ export const HomeTrustBar: React.FC = () => {
             </h3>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
             {otherChannels.map((item, index) => (
               <div
                 key={index}

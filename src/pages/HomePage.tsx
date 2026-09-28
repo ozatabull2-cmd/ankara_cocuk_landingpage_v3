@@ -4,7 +4,6 @@ import { MetaHead } from '../components/MetaHead';
 import { HomeHero } from '../components/home/HomeHero';
 import { HomeTrustBar } from '../components/home/HomeTrustBar';
 import { HomeWeeklyPackages } from '../components/home/HomeWeeklyPackages';
-import { HomePackageComparison } from '../components/home/HomePackageComparison';
 import { HomeRetargetingSection } from '../components/home/HomeRetargetingSection';
 import { HomeShowcaseSection } from '../components/home/HomeShowcaseSection';
 import { MonthlyBanner } from '../components/home/MonthlyBanner';
@@ -35,10 +34,7 @@ export const HomePage: React.FC = () => {
         {/* 3. Haftalık Paketler (3.000 TL & 6.000 TL) */}
         <HomeWeeklyPackages />
 
-        {/* 4. Karşılaştırma */}
-        <HomePackageComparison />
-
-        {/* 5. Yeniden Ulaşma Açıklaması ve Örneği */}
+        {/* 4. Yeniden Ulaşma Açıklaması ve Örneği */}
         <HomeRetargetingSection />
 
         {/* 6. Tanıtım Formatları / Örneği */}

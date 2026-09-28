@@ -6,14 +6,14 @@ export const HomePackageComparison: React.FC = () => {
     {
       feature: "Yayın Kanalları",
       pkg3000: "Instagram & Web Sitesi",
-      pkg6000: "Instagram, Web, WhatsApp & Mobil Uygulama",
+      pkg6000: "Instagram, Web & WhatsApp Topluluğu",
       pkg3000Included: true,
       pkg6000Included: true,
     },
     {
-      feature: "WhatsApp & Mobil Bildirim",
+      feature: "WhatsApp Topluluk Yayını",
       pkg3000: "Dahil değil",
-      pkg6000: "Topluluk duyurusu ve anlık uygulama bildirimi",
+      pkg6000: "WhatsApp topluluğunda duyuru",
       pkg3000Included: false,
       pkg6000Included: true,
     },
