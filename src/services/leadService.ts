@@ -4,9 +4,9 @@ export interface PromotionLeadFormData {
   businessName: string;
   location: string;
   serviceDescription: string;
-  promotionTypes: string[];
+  promotionTypes?: string[];
   contactName?: string;
-  contactPreference: 'phone' | 'email';
+  contactPreference: 'phone' | 'instagram' | 'email';
   contactValue: string;
   notes?: string;
 }

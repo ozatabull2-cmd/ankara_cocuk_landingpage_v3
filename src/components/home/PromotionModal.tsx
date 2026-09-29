@@ -11,7 +11,7 @@ import {
   MapPin,
   Sparkles,
   Phone,
-  Mail,
+  Instagram,
   User,
   Info,
 } from 'lucide-react';
@@ -42,7 +42,6 @@ export const PromotionModal: React.FC<PromotionModalProps> = ({ isOpen, onClose 
     businessName: '',
     location: '',
     serviceDescription: '',
-    promotionTypes: [],
     contactName: '',
     contactPreference: 'phone',
     contactValue: '',
@@ -54,14 +53,6 @@ export const PromotionModal: React.FC<PromotionModalProps> = ({ isOpen, onClose 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submissionSuccess, setSubmissionSuccess] = useState(false);
   const [backendNotice, setBackendNotice] = useState<string | null>(null);
-
-  // Promotion type options
-  const promotionTypeOptions = [
-    'Instagram gönderisi',
-    'Instagram hikâyesi',
-    'Web sitesi',
-    'WhatsApp toplulukları',
-  ];
 
   // Close on Escape key and prevent background scrolling
   useEffect(() => {
@@ -94,18 +85,6 @@ export const PromotionModal: React.FC<PromotionModalProps> = ({ isOpen, onClose 
     }
   };
 
-  const handleTogglePromotionType = (type: string) => {
-    setFormData((prev) => {
-      const exists = prev.promotionTypes.includes(type);
-      return {
-        ...prev,
-        promotionTypes: exists
-          ? prev.promotionTypes.filter((t) => t !== type)
-          : [...prev.promotionTypes, type],
-      };
-    });
-  };
-
   const validateForm = (): boolean => {
     const newErrors: Record<string, string> = {};
 
@@ -125,12 +104,12 @@ export const PromotionModal: React.FC<PromotionModalProps> = ({ isOpen, onClose 
       newErrors.contactValue =
         formData.contactPreference === 'phone'
           ? 'Lütfen telefon numaranızı giriniz.'
-          : 'Lütfen e-posta adresinizi giriniz.';
+          : 'Lütfen Instagram sayfanızı/kullanıcı adınızı giriniz.';
     } else {
-      if (formData.contactPreference === 'email') {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(formData.contactValue.trim())) {
-          newErrors.contactValue = 'Geçerli bir e-posta adresi giriniz.';
+      if (formData.contactPreference === 'instagram') {
+        const cleaned = formData.contactValue.trim().replace(/^@/, '');
+        if (cleaned.length < 2) {
+          newErrors.contactValue = 'Lütfen geçerli bir Instagram sayfası veya kullanıcı adı giriniz.';
         }
       } else {
         const phoneDigits = formData.contactValue.replace(/\D/g, '');
@@ -180,7 +159,6 @@ export const PromotionModal: React.FC<PromotionModalProps> = ({ isOpen, onClose 
       businessName: '',
       location: '',
       serviceDescription: '',
-      promotionTypes: [],
       contactName: '',
       contactPreference: 'phone',
       contactValue: '',
@@ -472,42 +450,7 @@ export const PromotionModal: React.FC<PromotionModalProps> = ({ isOpen, onClose 
                     )}
                   </div>
 
-                  {/* Field 4: İlgilenilen Tanıtım Türleri (Çoklu Seçilebilir) */}
-                  <div className="space-y-2">
-                    <label className="block text-sm font-extrabold text-[#0B2545]">
-                      İlgilendiğiniz Tanıtım Türleri <span className="text-xs text-slate-500 font-normal">(Birden fazla seçilebilir)</span>
-                    </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {promotionTypeOptions.map((type) => {
-                        const isChecked = formData.promotionTypes.includes(type);
-                        return (
-                          <button
-                            key={type}
-                            type="button"
-                            onClick={() => handleTogglePromotionType(type)}
-                            className={`flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl border text-left text-xs sm:text-sm font-bold transition-all ${
-                              isChecked
-                                ? 'bg-orange-50 border-[#EE5D50] text-[#D93829] shadow-2xs'
-                                : 'bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100'
-                            }`}
-                          >
-                            <div
-                              className={`w-4 h-4 rounded-md border flex items-center justify-center transition-colors flex-shrink-0 ${
-                                isChecked
-                                  ? 'bg-[#EE5D50] border-[#EE5D50] text-white'
-                                  : 'border-slate-400 bg-white'
-                              }`}
-                            >
-                              {isChecked && <CheckCircle2 className="w-3.5 h-3.5 stroke-[3]" />}
-                            </div>
-                            <span>{type}</span>
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-
-                  {/* Field 5: İletişim Kişisinin Adı (İsteğe Bağlı) */}
+                  {/* Field 4: İletişim Kişisinin Adı (İsteğe Bağlı) */}
                   <div>
                     <label className="block text-sm font-extrabold text-[#0B2545] mb-1.5">
                       İletişim Kişisinin Adı <span className="text-xs text-slate-500 font-normal">(İsteğe bağlı)</span>
@@ -526,7 +469,7 @@ export const PromotionModal: React.FC<PromotionModalProps> = ({ isOpen, onClose 
                     </div>
                   </div>
 
-                  {/* Field 6 & 7: İletişim Tercihi & İlgili Değer (Zorunlu) */}
+                  {/* Field 5: İletişim Tercihi & İlgili Değer (Zorunlu) */}
                   <div className="space-y-3 bg-slate-50 p-4 rounded-2xl border border-slate-200">
                     <label className="block text-sm font-extrabold text-[#0B2545]">
                       İletişim Tercihi <span className="text-red-500">*</span>
@@ -553,17 +496,17 @@ export const PromotionModal: React.FC<PromotionModalProps> = ({ isOpen, onClose 
                       <button
                         type="button"
                         onClick={() => {
-                          setFormData({ ...formData, contactPreference: 'email', contactValue: '' });
+                          setFormData({ ...formData, contactPreference: 'instagram', contactValue: '' });
                           setErrors({ ...errors, contactValue: '' });
                         }}
                         className={`flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-bold border transition-all ${
-                          formData.contactPreference === 'email'
-                            ? 'bg-white border-blue-500 text-[#0B2545] shadow-xs'
+                          formData.contactPreference === 'instagram'
+                            ? 'bg-white border-pink-500 text-[#0B2545] shadow-xs'
                             : 'bg-transparent border-slate-200 text-slate-600 hover:bg-white'
                         }`}
                       >
-                        <Mail className={`w-4 h-4 ${formData.contactPreference === 'email' ? 'text-blue-600' : ''}`} />
-                        <span>E-posta</span>
+                        <Instagram className={`w-4 h-4 ${formData.contactPreference === 'instagram' ? 'text-pink-500' : ''}`} />
+                        <span>Instagram Sayfası</span>
                       </button>
                     </div>
 
@@ -574,11 +517,11 @@ export const PromotionModal: React.FC<PromotionModalProps> = ({ isOpen, onClose 
                           {formData.contactPreference === 'phone' ? (
                             <Phone className="w-4 h-4" />
                           ) : (
-                            <Mail className="w-4 h-4" />
+                            <Instagram className="w-4 h-4 text-pink-500" />
                           )}
                         </div>
                         <input
-                          type={formData.contactPreference === 'phone' ? 'tel' : 'email'}
+                          type={formData.contactPreference === 'phone' ? 'tel' : 'text'}
                           value={formData.contactValue}
                           onChange={(e) => {
                             setFormData({ ...formData, contactValue: e.target.value });
@@ -586,8 +529,8 @@ export const PromotionModal: React.FC<PromotionModalProps> = ({ isOpen, onClose 
                           }}
                           placeholder={
                             formData.contactPreference === 'phone'
-                              ? '05xx xxx xx xx'
-                              : 'ornek@isletme.com'
+                              ? 'Örn: 05xx xxx xx xx'
+                              : 'Örn: @isletmehesabi veya profil linki'
                           }
                           className={`w-full pl-10 pr-4 py-3 rounded-xl border bg-white text-sm sm:text-base font-medium transition-all focus:outline-none focus:ring-2 ${
                             errors.contactValue

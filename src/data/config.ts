@@ -36,8 +36,7 @@ export const SITE_CONFIG = {
 export const PROMOTION_WHATSAPP_MESSAGE = `Merhaba, tanıtım seçenekleri hakkında bilgi almak istiyorum.
 İşletme/kurum adı: 
 İlçe/konum: 
-Tanıtmak istediğim hizmet veya etkinlik: 
-İlgilendiğim tanıtım türü:`;
+Tanıtmak istediğim hizmet veya etkinlik:`;
 
 /**
  * Creates a direct WhatsApp link with prefilled contextual text
