@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2.5 text-sm sm:text-base font-bold">
               <li>
                 <Link to="/" className="text-slate-200 hover:text-white transition-colors">
-                  Haftalık Tanıtım Paketleri (3.000 TL - 6.000 TL)
+                  Haftalık Tanıtım Paketleri (3.000 TL + KDV - 6.000 TL + KDV)
                 </Link>
               </li>
               <li>

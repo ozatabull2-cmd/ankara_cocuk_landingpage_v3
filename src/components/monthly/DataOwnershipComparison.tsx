@@ -28,7 +28,7 @@ export const DataOwnershipComparison: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wider text-blue-400">
-                  20.000 TL Modeli
+                  20.000 TL + KDV Modeli
                 </span>
                 <span className="text-[11px] bg-blue-950 text-blue-300 px-2.5 py-0.5 rounded-full border border-blue-800/60 font-semibold">
                   Medya Ağı Altyapısı
@@ -59,7 +59,7 @@ export const DataOwnershipComparison: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-wider text-cyan-400">
-                  25.000 TL Modeli
+                  25.000 TL + KDV Modeli
                 </span>
                 <span className="text-[11px] bg-cyan-950 text-cyan-300 px-2.5 py-0.5 rounded-full border border-cyan-800/60 font-semibold">
                   Okula Ait Altyapı
@@ -97,7 +97,7 @@ export const DataOwnershipComparison: React.FC = () => {
               Hızlı Karar Yardımı
             </div>
             <p className="text-xs sm:text-sm text-slate-200 leading-relaxed">
-              Daha ekonomik ve hızlı sürekli görünürlük için <strong className="text-white">20.000 TL modeli</strong>; okulunuza ait kalıcı reklam altyapısı için <strong className="text-white">25.000 TL modeli</strong> daha uygundur.
+              Daha ekonomik ve hızlı sürekli görünürlük için <strong className="text-white">20.000 TL + KDV modeli</strong>; okulunuza ait kalıcı reklam altyapısı için <strong className="text-white">25.000 TL + KDV modeli</strong> daha uygundur.
             </p>
           </div>
         </div>

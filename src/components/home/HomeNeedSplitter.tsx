@@ -35,7 +35,7 @@ export const HomeNeedSplitter: React.FC = () => {
               </div>
             </div>
             <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-blue-600">
-              <span>Haftalık Paketleri İnceleyin (3.000 TL - 6.000 TL)</span>
+              <span>Haftalık Paketleri İnceleyin (3.000 TL + KDV - 6.000 TL + KDV)</span>
               <ArrowDown className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
             </div>
           </a>

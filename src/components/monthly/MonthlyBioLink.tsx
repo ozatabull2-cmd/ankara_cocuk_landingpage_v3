@@ -52,7 +52,7 @@ export const MonthlyBioLink: React.FC = () => {
                   <Sparkles className="w-3.5 h-3.5 text-cyan-600" />
                 </div>
                 <div className="text-xs sm:text-sm text-slate-600">
-                  BioLink, aylık <span className="font-bold text-slate-900">750 TL’den</span> başlayan seçeneklerle bağımsız olarak da kullanılabilir.
+                  BioLink, aylık <span className="font-bold text-slate-900">750 TL + KDV’den</span> başlayan seçeneklerle bağımsız olarak da kullanılabilir.
                 </div>
               </div>
 

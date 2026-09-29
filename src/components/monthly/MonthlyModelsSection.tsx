@@ -53,14 +53,12 @@ export const MonthlyModelsSection: React.FC = () => {
                   </h3>
 
                   {/* Price */}
-                  <div className="flex flex-wrap items-baseline gap-1.5 my-3 pb-3 border-b border-slate-800">
+                  <div className="flex flex-wrap items-baseline gap-2 my-3 pb-3 border-b border-slate-800">
                     <span className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-                      {model.price.split(' / ')[0]}
+                      {model.price}
                     </span>
                     <span className="text-slate-300 font-medium text-xs sm:text-sm">
-                      {model.price.includes('+')
-                        ? '/ ay + Meta reklam bütçesi'
-                        : '/ ay'}
+                      {model.period}
                     </span>
                   </div>
 

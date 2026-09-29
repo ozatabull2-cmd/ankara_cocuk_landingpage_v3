@@ -62,8 +62,8 @@ export const HomePackageComparison: React.FC = () => {
         {/* Desktop Header Bar (Visible on md+ screens) */}
         <div className="hidden md:grid md:grid-cols-12 gap-4 pb-3 border-b-2 border-slate-200 text-sm font-black uppercase tracking-wider text-[#0B2545] px-4">
           <div className="md:col-span-4">Özellik</div>
-          <div className="md:col-span-4 text-center">3.000 TL (Duyur ve Görünür Ol)</div>
-          <div className="md:col-span-4 text-center text-[#D93829]">6.000 TL (Yönlendir, Ölç ve Yeniden Ulaş)</div>
+          <div className="md:col-span-4 text-center">3.000 TL + KDV (Duyur ve Görünür Ol)</div>
+          <div className="md:col-span-4 text-center text-[#D93829]">6.000 TL + KDV (Yönlendir, Ölç ve Yeniden Ulaş)</div>
         </div>
 
         {/* Rows Container */}
@@ -86,7 +86,7 @@ export const HomePackageComparison: React.FC = () => {
                   {/* 3.000 TL Column */}
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
                     <div className="text-[11px] font-black text-slate-700 uppercase tracking-wide mb-1.5 flex items-center justify-between md:hidden">
-                      <span>3.000 TL</span>
+                      <span>3.000 TL + KDV</span>
                       {row.pkg3000Included ? (
                         <span className="w-2 h-2 rounded-full bg-blue-600" />
                       ) : (
@@ -108,11 +108,11 @@ export const HomePackageComparison: React.FC = () => {
                   {/* 6.000 TL Column */}
                   <div className={`p-3 rounded-xl border-2 flex flex-col justify-between ${
                     row.highlight6000 
-                      ? 'bg-[#FFF4F2] border-[#FDA29B]' 
-                      : 'bg-orange-50/50 border-orange-200'
+                    ? 'bg-[#FFF4F2] border-[#FDA29B]' 
+                    : 'bg-orange-50/50 border-orange-200'
                   }`}>
                     <div className="text-[11px] font-black text-[#D93829] uppercase tracking-wide mb-1.5 flex items-center justify-between md:hidden">
-                      <span>6.000 TL</span>
+                      <span>6.000 TL + KDV</span>
                       <span className="w-2 h-2 rounded-full bg-[#EE5D50]" />
                     </div>
                     <div className="flex items-start gap-1.5 sm:gap-2 text-xs sm:text-base text-slate-950 leading-relaxed font-bold">

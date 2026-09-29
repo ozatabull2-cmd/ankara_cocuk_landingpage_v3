@@ -13,7 +13,7 @@ export const HomeShowcaseSection: React.FC = () => {
     {
       icon: MessageCircle,
       title: "WhatsApp Topluluk Yayını",
-      badge: "6.000 TL Paketinde",
+      badge: "6.000 TL + KDV Paketinde",
       desc: "Ankara'daki velilerin doğrudan telefonuna ulaşan WhatsApp topluluk duyurusu ile yüksek dikkat ve doğrudan erişim.",
       details: ["WhatsApp topluluklarında duyuru", "Doğrudan veli erişimi", "Hızlı etkileşim olanağı"],
       highlight: true,

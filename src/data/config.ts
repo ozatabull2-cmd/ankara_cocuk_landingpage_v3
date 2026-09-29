@@ -14,7 +14,7 @@ export const SITE_CONFIG = {
   leadApiEndpoint: null as string | null,
   
   // Ad budget note configurable
-  adBudgetMaxLimit: null as string | null, // e.g. "5.000 TL" or null for default text
+  adBudgetMaxLimit: null as string | null, // e.g. "5.000 TL + KDV" or null for default text
   adBudgetNoticeWeekly: "Meta reklam bütçesi ve kampanya dağılımı, yayın öncesinde yazılı olarak netleştirilir.",
   adBudgetNoticeMonthly20k: "Planlanan Meta reklam bütçesi ve aylık üst sınır, çalışma öncesinde yazılı olarak netleştirilir.",
   
@@ -104,7 +104,7 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
     id: "haftalik-3000",
     tag: "TEMEL GÖRÜNÜRLÜK",
     name: "Duyur ve Görünür Ol",
-    price: "3.000 TL",
+    price: "3.000 TL + KDV",
     period: "/ 7 günlük yayın",
     shortDesc: "İşletmenizi ve duyurunuzu ailelere tanıtın.",
     targetAudience: "Atölye, tiyatro, oyun alanı, etkinlik ve çocuk odaklı işletmeler.",
@@ -116,7 +116,7 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
     ],
     ctaText: "Bu paketi görüşelim",
     event: "click_package_3000",
-    whatsappMessage: "Merhaba, Ankara Çocuk Ağı 3.000 TL'lik 'Duyur ve Görünür Ol' haftalık tanıtım paketi hakkında görüşmek istiyorum.",
+    whatsappMessage: "Merhaba, Ankara Çocuk Ağı 3.000 TL + KDV'lik 'Duyur ve Görünür Ol' haftalık tanıtım paketi hakkında görüşmek istiyorum.",
     isPopular: false,
     notice: "7 günlük tek seferlik kampanya yayınıdır. Meta reklam desteği paket dahilindedir.",
   },
@@ -124,7 +124,7 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
     id: "haftalik-6000",
     tag: "ÇOK KANALLI DAĞITIM & YENİDEN ULAŞMA",
     name: "Yönlendir, Ölç ve Yeniden Ulaş",
-    price: "6.000 TL",
+    price: "6.000 TL + KDV",
     period: "/ 7 günlük yayın",
     shortDesc: "Ek yayın kanalları ve en az 2 katı erişimle tanıtımınızı genişletin, ilgi gösterenlere sonraki kampanyalarda yeniden ulaşabilin.",
     targetAudience: "Etkinlik, atölye, tiyatro, oyun alanı, anaokulu ve daha geniş kitleye ulaşmak isteyen işletmeler.",
@@ -144,7 +144,7 @@ export const WEEKLY_PACKAGES: WeeklyPackage[] = [
     ],
     ctaText: "İşletmeme özel tanıtımı görüşelim",
     event: "click_package_6000",
-    whatsappMessage: "Merhaba, Ankara Çocuk Ağı 6.000 TL'lik 'Yönlendir, Ölç ve Yeniden Ulaş' işletmeme özel tanıtım paketi hakkında görüşmek istiyorum.",
+    whatsappMessage: "Merhaba, Ankara Çocuk Ağı 6.000 TL + KDV'lik 'Yönlendir, Ölç ve Yeniden Ulaş' işletmeme özel tanıtım paketi hakkında görüşmek istiyorum.",
     isPopular: true,
     notice: "7 günlük tek seferlik kampanya yayınıdır. En az 2 katı erişim sağlayan Meta reklam desteği paket dahilindedir.",
   },
@@ -155,7 +155,7 @@ export const WEEKLY_FAQS = [
   {
     id: "w-faq-1",
     question: "Hangi paket benim için uygun?",
-    answer: "Tek bir atölye veya etkinlik duyurusunu Instagram ve web üzerinden ailelere iletmek istiyorsanız 3.000 TL paketi uygundur. Instagram ve web'in yanı sıra WhatsApp topluluğundan da faydalanmak, en az 2 katı erişim elde etmek ve ilgi gösteren velilere sonraki duyurularda yeniden reklam gösterebilmek istiyorsanız 6.000 TL paketi uygundur.",
+    answer: "Tek bir atölye veya etkinlik duyurusunu Instagram ve web üzerinden ailelere iletmek istiyorsanız 3.000 TL + KDV paketi uygundur. Instagram ve web'in yanı sıra WhatsApp topluluğundan da faydalanmak, en az 2 katı erişim elde etmek ve ilgi gösteren velilere sonraki duyurularda yeniden reklam gösterebilmek istiyorsanız 6.000 TL + KDV paketi uygundur.",
   },
   {
     id: "w-faq-2",
@@ -165,7 +165,7 @@ export const WEEKLY_FAQS = [
   {
     id: "w-faq-3",
     question: "Yeniden ulaşma (retargeting) altyapısı nasıl çalışır?",
-    answer: "6.000 TL'lik pakette tanıtımınızla etkileşime geçen kişilerden Ankara Çocuk Ağı reklam altyapısında işletmenize özel bir hedef kitle oluşturulur. Hedef kitle sürekli güncellenir ve birikir. Sonraki tanıtımlarınızda bu kitleye yeniden reklam gösterilebilir.",
+    answer: "6.000 TL + KDV'lik pakette tanıtımınızla etkileşime geçen kişilerden Ankara Çocuk Ağı reklam altyapısında işletmenize özel bir hedef kitle oluşturulur. Hedef kitle sürekli güncellenir ve birikir. Sonraki tanıtımlarınızda bu kitleye yeniden reklam gösterilebilir.",
   },
   {
     id: "w-faq-4",
@@ -194,7 +194,7 @@ export const MONTHLY_MODELS: MonthlyModel[] = [
   {
     id: "aylik-20000",
     name: "Aylık Sürekli Görünürlük",
-    price: "20.000 TL",
+    price: "20.000 TL + KDV",
     period: "/ ay",
     shortDesc: "Dört hafta üst üste görünürlük, tekrar reklam gösterimi ve Ankara Çocuk Ağı üzerinden marka hatırlatma.",
     features: [
@@ -205,16 +205,16 @@ export const MONTHLY_MODELS: MonthlyModel[] = [
       "Hedef kitle ve kampanya verilerinin Ankara Çocuk Ağı altyapısında kalması",
       "BioLink Pro kullanım hakkı",
     ],
-    priceNote: "Dört ayrı haftalık çalışma 24.000 TL tutarken, aylık anlaşmada toplam hizmet bedeli 20.000 TL’dir.",
+    priceNote: "Dört ayrı haftalık çalışma 24.000 TL + KDV tutarken, aylık anlaşmada toplam hizmet bedeli 20.000 TL + KDV’dir.",
     budgetNotice: "Planlanan Meta reklam bütçesi ve aylık üst sınır, çalışma öncesinde yazılı olarak netleştirilir.",
-    ctaText: "20.000 TL Modelini Sor",
+    ctaText: "20.000 TL + KDV Modelini Sor",
     event: "click_package_20000",
-    whatsappMessage: "Merhaba, Ankara Çocuk Ağı 20.000 TL'lik 'Aylık Sürekli Görünürlük' modeli hakkında bilgi almak istiyorum.",
+    whatsappMessage: "Merhaba, Ankara Çocuk Ağı 20.000 TL + KDV'lik 'Aylık Sürekli Görünürlük' modeli hakkında bilgi almak istiyorum.",
   },
   {
     id: "aylik-25000",
     name: "Okula Özel Reklam Sistemi",
-    price: "25.000 TL",
+    price: "25.000 TL + KDV",
     period: "/ ay + Meta reklam bütçesi",
     shortDesc: "Okulun kendi reklam hesabında biriken, zaman içinde güçlenen ve kuruma ait kalan dijital reklam altyapısı.",
     features: [
@@ -228,9 +228,9 @@ export const MONTHLY_MODELS: MonthlyModel[] = [
     ],
     priceNote: "Minimum üç aylık çalışma önerilir. Reklam hesabı, hedef kitleler ve kampanya geçmişi okula ait olur.",
     budgetNotice: "Meta reklam bütçesi doğrudan okul tarafından Meta’ya ödenir.",
-    ctaText: "25.000 TL Modelini Sor",
+    ctaText: "25.000 TL + KDV Modelini Sor",
     event: "click_package_25000",
-    whatsappMessage: "Merhaba, okulumuz için 25.000 TL'lik 'Okula Özel Reklam Sistemi' hakkında görüşme başlatmak istiyorum.",
+    whatsappMessage: "Merhaba, okulumuz için 25.000 TL + KDV'lik 'Okula Özel Reklam Sistemi' hakkında görüşme başlatmak istiyorum.",
     highlightBadge: "Kurumsal Altyapı",
   },
 ];
@@ -283,13 +283,13 @@ export const MONTHLY_PROCESS_STEPS = [
 export const MONTHLY_FAQS = [
   {
     id: "m-faq-2",
-    question: "20.000 TL ve 25.000 TL modellerinin temel farkı nedir?",
-    answer: "20.000 TL modelinde reklamlar Ankara Çocuk Ağı reklam hesabından yönetilir, kitleler medya ağında kalır ve planlanan reklam bütçesi paket dahilindedir. 25.000 TL modelinde ise reklamlar okulun kendi Meta hesabından yönetilir, tüm kitle ve kampanya verileri okula ait olur ve reklam bütçesini okul doğrudan Meta'ya öder.",
+    question: "20.000 TL + KDV ve 25.000 TL + KDV modellerinin temel farkı nedir?",
+    answer: "20.000 TL + KDV modelinde reklamlar Ankara Çocuk Ağı reklam hesabından yönetilir, kitleler medya ağında kalır ve planlanan reklam bütçesi paket dahilindedir. 25.000 TL + KDV modelinde ise reklamlar okulun kendi Meta hesabından yönetilir, tüm kitle ve kampanya verileri okula ait olur ve reklam bütçesini okul doğrudan Meta'ya öder.",
   },
   {
     id: "m-faq-3",
     question: "Reklam bütçesi hizmet ücretine dahil mi?",
-    answer: "20.000 TL modelinde planlanan reklam bütçesi hizmet bedeline dahildir ve tarafımızdan karşılanır. 25.000 TL modelinde reklam bütçesi okul tarafından doğrudan Meta reklam hesabına yatırılır.",
+    answer: "20.000 TL + KDV modelinde planlanan reklam bütçesi hizmet bedeline dahildir ve tarafımızdan karşılanır. 25.000 TL + KDV modelinde reklam bütçesi okul tarafından doğrudan Meta reklam hesabına yatırılır.",
   },
   {
     id: "m-faq-4",
@@ -304,7 +304,7 @@ export const MONTHLY_FAQS = [
   {
     id: "m-faq-6",
     question: "Reklam hesabı ve hedef kitleler kime ait oluyor?",
-    answer: "25.000 TL'lik 'Okula Özel Reklam Sistemi'nde oluşturulan Meta Business Manager, reklam hesabı, Pixel/CAPI verileri ve özel hedef kitleler tamamen okulun mülkiyetinde kalır.",
+    answer: "25.000 TL + KDV'lik 'Okula Özel Reklam Sistemi'nde oluşturulan Meta Business Manager, reklam hesabı, Pixel/CAPI verileri ve özel hedef kitleler tamamen okulun mülkiyetinde kalır.",
   },
 ];
 
